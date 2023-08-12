@@ -1,0 +1,71 @@
+import classes from "./MyList.module.css";
+import { IoIosArrowForward } from "react-icons/io";
+import rank from "../../assets/rank.png";
+import report from "../../assets/report.png";
+import invite from "../../assets/invite.png";
+import guide from "../../assets/guide.png";
+import announcement from "../../assets/announcement.png";
+import service_guide from "../../assets/service_guide.png";
+import service_center from "../../assets/service_center.png";
+
+const MyList = () => {
+    return (
+        <section className={classes.listSection}>
+                    <ul className={classes.firstList}>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={rank} alt="rank이미지입니다." className={classes.rank} />
+                                등급별 혜택안내
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={report} alt="report이미지입니다." className={classes.rank} />
+                                이용리포트
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={invite} alt="invite이미지입니다." className={classes.rank} />
+                                친구 초대하기
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={guide} alt="guide이미지입니다." className={classes.rank} />
+                                사용가이드
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                    </ul>
+                    <ul className={classes.secondList}>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={announcement} alt="announcement이미지입니다." className={classes.rank} />
+                                공지사항
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={service_guide} alt="service_guide이미지입니다." className={classes.rank} />
+                                서비스 안내
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                        <li>
+                            <div className={classes.listTitle}>
+                                <img src={service_center} alt="service_center이미지입니다." className={classes.rank} />
+                                문의/고객센터
+                            </div>
+                            <IoIosArrowForward size="27" color="#ACE2B5" />
+                        </li>
+                    </ul>
+                </section>
+    )
+}
+
+export default MyList;

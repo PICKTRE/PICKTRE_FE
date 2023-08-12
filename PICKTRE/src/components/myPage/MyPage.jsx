@@ -1,33 +1,25 @@
 import classes from "./MyPage.module.css"
-import { BiBell } from "react-icons/bi";
+import MyList from "./MyList";
+import Footer from "../common/Footer";
+import MyHeader from "./MyHeader";
+import MySubPost from "./MySubPost";
+import MyProfile from "./MyProfile";
+
 
 const MyPage = () => {
     return (
         <div className={classes.container}>
-            <header className={classes.header}>
-                <section className={classes.mainHeader}>
-                    <div className={classes.mainHeaderContent}>
-                        <h1>PICKTRE</h1>
-                        <BiBell size="27" />
-                    </div>
-                </section>
-                <section className={classes.subHeader}>
-                    <article className={classes.pageHeader}>
-                        My Page
-                    </article>
-                </section>
-            </header>
+            <MyHeader />
             <main className={classes.main}>
-                <section className={classes.profileSection}>프로필 섹션입니다.</section>
-                <section className={classes.mainPostSection}>
-                    <div className={classes.mainSubPost}>포스트 섹션입니다.</div>
-                    <div className={classes.mainPost}>
-                        <div className={classes.mainPostContent}>포스트 섹션입니다.</div>
-                    </div>
+                <section className={classes.profileSection}>
+                    <MyProfile />
                 </section>
-                <section className={classes.lastPostSection}>마지막 포스트 섹션입니다.</section>
+                <section className={classes.mainSubPost}>
+                    <MySubPost />
+                </section>
+                <MyList />
             </main>
-            <footer className={classes.footer}>푸터 섹션입니다.</footer>
+            <Footer />
         </div>
     )
 }

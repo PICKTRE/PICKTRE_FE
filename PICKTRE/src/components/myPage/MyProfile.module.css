@@ -1,0 +1,108 @@
+.profileSection {
+    width: 359px;
+    height: 112px;
+    background-color: #D0F2D1;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImg{
+    width: 88px;
+    height: 88px;
+    border-radius: 100px;
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.profile{
+    display: flex;
+    margin-left: 24px;
+}
+
+.profileInfoSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.profileInfo li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 7px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.name{
+    width: 109px;
+    height: 15px;
+    background-color: #e3e3e3;
+}
+
+.todayReward{
+    width: 34px;
+    height: 11px;
+    background-color: #e3e3e3;
+}
+
+.totalReward{
+    width: 34px;
+    height: 11px;
+    background-color: #e3e3e3;
+}
+
+
+.profileTier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 77px;
+    height: 60px; */
+    padding-left: 12px;
+}
+
+.profileTierImg{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: #e3e3e3;
+}
+
+.profileTierContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 10px;
+    background-color: #e3e3e3;
+    font-size: 7px;
+}
+
+.verify{
+    width: 223px;
+    height: 16px;
+    font-size: 7px;
+    border-radius: 7px;
+    border: 0px;
+    margin: 5px 0px 0px 14px;
+    background-color: #E8FAE9;
+}
