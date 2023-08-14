@@ -1,0 +1,93 @@
+.footer {
+    width: 390px;
+    height: 68px;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 3px 3px 0px 0px;
+    
+}
+
+.pointSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74.5px;
+    height: 68px;
+    background-color: #ACE2B5;
+    cursor: pointer;
+}
+
+.mapSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74.5px;
+    height: 68px;
+    border-radius: 0px 10px 0px 0px;
+    background-color: #ACE2B5;
+    cursor: pointer;
+}
+
+.qrSection{
+    width: 92px;
+    height: 68px;
+    background-color: #ACE2B5;
+}
+
+.qrImgSection{
+    width: 92px;
+    height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    border-radius: 0px 0px 100px 100px;
+    background-color: #ffffff;
+}
+
+.mypageSection{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74.5px;
+    height: 68px;
+    border-radius: 10px 0px 0px 0px;
+    background-color: #ACE2B5;
+}
+
+.settingSection{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74.5px;
+    height: 68px;
+    background-color: #ACE2B5;
+}
+.point{
+    width: 28px;
+    height: 42px;
+}
+
+.map{
+    width: 20px;
+    height: 42px;
+}
+
+.QR{
+    margin-left: 6px;
+    width: 66px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.mypage{
+    width: 46px;
+    height: 42px;
+}
+
+.setting{
+    width: 26.5px;
+    height: 42px;
+}
