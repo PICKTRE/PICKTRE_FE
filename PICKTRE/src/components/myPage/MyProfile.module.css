@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.profileImg{
+.profileImg {
     width: 88px;
     height: 88px;
     border-radius: 100px;
@@ -18,22 +18,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.profile{
+.profile {
     display: flex;
     margin-left: 24px;
 }
 
-.profileInfoSection{
+.profileInfoSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.profileInfo{
+.profileInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +42,7 @@
     margin: 0;
 }
 
-.profileInfo li{
+.profileInfo li {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -51,26 +51,26 @@
     margin-bottom: 4px;
 }
 
-.name{
+.name {
     width: 109px;
     height: 15px;
     background-color: #e3e3e3;
 }
 
-.todayReward{
+.todayReward {
     width: 34px;
     height: 11px;
     background-color: #e3e3e3;
 }
 
-.totalReward{
+.totalReward {
     width: 34px;
     height: 11px;
     background-color: #e3e3e3;
 }
 
 
-.profileTier{
+.profileTier {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,14 +80,14 @@
     padding-left: 12px;
 }
 
-.profileTierImg{
+.profileTierImg {
     width: 60px;
     height: 60px;
     border-radius: 100px;
     background-color: #e3e3e3;
 }
 
-.profileTierContent{
+.profileTierContent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,7 @@
     font-size: 7px;
 }
 
-.verify{
+.verify {
     width: 223px;
     height: 16px;
     font-size: 7px;
@@ -105,4 +105,46 @@
     border: 0px;
     margin: 5px 0px 0px 14px;
     background-color: #E8FAE9;
+}
+
+@keyframes loading {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, 0.3);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+}
+
+.todayReward::before,
+.totalReward::before,
+.name::before,
+.profileImg::before,
+.profileTierImg::before,
+.profileTierContent::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    /* background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2); */
+    animation: loading 2s infinite linear;
+}
+
+
+.todayReward,
+.totalReward,
+.name,
+.profileImg,
+.profileTierImg,
+.profileTierContent{
+    overflow: hidden;
+    position: relative;
+    background-color: #ebebeb;
 }

@@ -8,6 +8,11 @@
     height: 107.5px;
 }
 
+.myPageLogo{
+    width: 106px;
+    height: 18px;
+}
+
 .mainHeaderContent {
     display: flex;
     flex-direction: row;
