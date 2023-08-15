@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const MapWithMarker = ({ location }) => {
-  const center = { lat: location.latitude , lng: location.longitude};
+  const center = { lat: location.latitude, lng: location.longitude };
 
   return (
     <GoogleMap zoom={18} center={center} mapContainerClassName="map-container">
@@ -36,10 +36,7 @@ const Map = () => {
     <div>
       <Header />
       <Wrapper>
-        <LoadScriptNext
-          googleMapsApiKey={GOOGLE_API_KEY}
-          libraries={["places"]}
-        >
+        <LoadScriptNext googleMapsApiKey={GOOGLE_API_KEY}>
           {location && <MapWithMarker location={location} />}
         </LoadScriptNext>
       </Wrapper>
