@@ -50,16 +50,31 @@
 .main {
   width: 390px;
   height: 668.15px;
-  background-color: white;
+  background-color: #ACE2B5;
 }
 
-.profileSection {
+.rewardSection {
   width: 390px;
-  height: 250px;
+  height: 130px;
+  padding-top: 10px;
   position: relative;
-  top: 20px;
   display: flex;
   justify-content: center;
+}
+
+
+.levelSection {
+  width: 390px;
+  height: 90px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainPostSection {
+  position: relative;
 }
 
 .mainPost {
@@ -67,7 +82,6 @@
   height: 400px;
   background-color: #828282;
   position: relative;
-  top: 18px;
   border-radius: 30px 30px 0px 0px;
 }
 
