@@ -43,6 +43,7 @@
     align-items: center;
     border-radius: 0px 0px 100px 100px;
     background-color: #ffffff;
+
 }
 
 .mypageSection{
@@ -88,6 +89,6 @@
 }
 
 .setting{
-    width: 26.5px;
+    width: 28px;
     height: 42px;
 }

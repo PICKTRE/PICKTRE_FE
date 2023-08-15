@@ -4,27 +4,6 @@
     background-color: #ACE2B5;
 }
 
-.mainHeader {
-    height: 107.5px;
-}
-
-.myPageLogo{
-    width: 106px;
-    height: 18px;
-}
-
-.mainHeaderContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 67.11px 0px 0px 19px;
-}
-
-.mainHeader h1 {
-    margin: 0;
-    font-size: 1.56rem;
-    font-weight: bold;
-}
 
 .subHeader {
     width: 390px;
@@ -45,13 +24,3 @@
     align-items: center;
 }
 
-
-.headerIcons{
-    display: flex;
-}
-
-.headerIcons li{
-    cursor: pointer;
-    list-style: none;
-    margin-right: 12px; 
-}
