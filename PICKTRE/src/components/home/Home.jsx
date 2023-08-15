@@ -3,6 +3,7 @@ import HomeHeader from "./HomeHeader";
 import HomeReward from "./HomeReward";
 import HomeLevel from "./HomeLevel";
 import HomeButton from "./HomeButton";
+import HomeMainPostText from "./HomeMainPostText";
 import Footer from "../common/Footer";
 
 const Home = () => {
@@ -23,7 +24,9 @@ const Home = () => {
           </section>
           <section className={classes.mainPostSection}>
             <div className={classes.mainPost}>
-              <div className={classes.mainPostContent}>포스트 섹션입니다.</div>
+              <div className={classes.mainPostContent}>
+                <HomeMainPostText />
+              </div>
             </div>
           </section>
         </main>
