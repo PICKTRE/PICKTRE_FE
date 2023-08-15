@@ -9,7 +9,7 @@ import { GOOGLE_API_KEY } from "../../constants/OAuth";
 const Wrapper = styled.div`
   .map-container {
     width: 390px;
-    height: 646.5px;
+    height: 668.5px;
   }
 `;
 
