@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.cardPhoto {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border-radius: 3px 3px 0 0;
+}
+
+.cardMainText {
+  margin: 0.5rem;
+  font-size: 0.5rem;
+  font-style: bold;
+}
+
+.cardSubText {
+  font-size: 0.5rem;
+  color: gray;
+}
+
+.cardHeart,
+.cardLikeCount {
+  font-style: bold;
+}
+
+.cardFooterWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+
+}
+
+.cardFooter {
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+}

@@ -4,6 +4,7 @@ import HomeReward from "./HomeReward";
 import HomeLevel from "./HomeLevel";
 import HomeButton from "./HomeButton";
 import HomeMainPostText from "./HomeMainPostText";
+import HomeCard from "./HomeCard";
 import Footer from "../common/Footer";
 
 const Home = () => {
@@ -26,6 +27,12 @@ const Home = () => {
             <div className={classes.mainPost}>
               <div className={classes.mainPostContent}>
                 <HomeMainPostText />
+                <div className={classes.mainCardSection}>
+                  <HomeCard />
+                  <HomeCard />
+                  <HomeCard />
+                  <HomeCard />
+                </div>
               </div>
             </div>
           </section>
