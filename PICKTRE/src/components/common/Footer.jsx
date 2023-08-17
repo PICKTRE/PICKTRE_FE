@@ -20,22 +20,26 @@ const Footer = () => {
 
     return (
         <footer className={classes.footer}>
-            <div className={classes.pointSection}>
+            <div className={classes.LeftSection}>
                 <img src={point} alt="푸터이미지입니다." className={classes.point} />
+                <p>포인트</p>
             </div>
-            <div className={classes.mapSection} onClick={onClickMap}>
+            <div className={classes.RightSection} onClick={onClickMap}>
                 <img src={map} alt="푸터이미지입니다." className={classes.map} />
+                <p>지도</p>            
             </div>
             <div className={classes.qrSection}>
                 <div className={classes.qrImgSection}>
                     <img src={QR} alt="푸터이미지입니다." className={classes.QR} />
                 </div>
             </div>
-            <div className={classes.mypageSection} onClick={onClickMyPage}>
+            <div className={classes.LeftSection} onClick={onClickMyPage}>
                 <img src={mypage} alt="푸터이미지입니다." className={classes.mypage} />
+                <p>마이페이지</p>
             </div>
-            <div className={classes.settingSection}>
+            <div className={classes.RightSection}>
                 <img src={setting} alt="푸터이미지입니다." className={classes.setting} />
+                <p>설정</p>
             </div>
         </footer>
     )
