@@ -6,6 +6,7 @@ import HomeButton from "./HomeButton";
 import HomeMainPostText from "./HomeMainPostText";
 import HomeCard from "./HomeCard";
 import Footer from "../common/Footer";
+import cardData from "./dummy/cardData.json";
 
 const Home = () => {
   return (
@@ -28,10 +29,16 @@ const Home = () => {
               <div className={classes.mainPostContent}>
                 <HomeMainPostText />
                 <div className={classes.mainCardSection}>
-                  <HomeCard />
-                  <HomeCard />
-                  <HomeCard />
-                  <HomeCard />
+                  {cardData.map((data, index) => (
+                    <HomeCard
+                      key={index}
+                      cardMainText={data.cardMainText}
+                      cardSubText={data.cardSubText}
+                      cardHeartCount={data.cardHeartCount}
+                      cardRank={index + 1}
+                      cardPhoto={data.cardPhotoURL}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
