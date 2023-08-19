@@ -39,12 +39,14 @@
 
 .rewardInfoText {
   font-size: 12px;
+  line-height: 140%;
 }
 
 
 .rewardInfo li {
   list-style: none;
   margin-bottom: 4px;
+  line-height: 140%;
 }
 
 .name {

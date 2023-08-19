@@ -11,26 +11,18 @@
 
 }
 
-.currentReward{
+.currentReward,
+.myActivityReport {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
   width: 100%;
   height: 25px;
   cursor: pointer;
-  border-right: 1px solid #00562f;
 }
 
-
-.myActivityReport{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9rem;
-  font-weight: bold;
-  width: 100%;
-  height: 25px;
-  cursor: pointer;
+.currentReward {
+  border-right: 1px solid #00562f;
 }

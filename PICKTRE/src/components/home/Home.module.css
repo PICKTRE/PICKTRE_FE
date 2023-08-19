@@ -49,7 +49,7 @@
 
 .main {
   width: 390px;
-  height: 668.15px;
+  height: 646.15px;
   background-color: #ACE2B5;
 }
 
@@ -89,13 +89,15 @@
 .mainCardSection {
   display: flex;
   flex-direction: row;
-  height: 315px;
+  height: 288px;
   align-items: center;
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 .mainPost {
   width: 390px;
-  height: 378px;
+  height: 356px;
   background-color: white;
   position: relative;
   margin-top: 10px;
