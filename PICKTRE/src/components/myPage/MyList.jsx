@@ -21,21 +21,21 @@ const MyList = () => {
                         </li>
                         <li>
                             <div className={classes.listTitle}>
-                                <img src={report} alt="report이미지입니다." className={classes.rank} />
+                                <img src={report} alt="report이미지입니다." className={classes.report} />
                                 이용리포트
                             </div>
                             <IoIosArrowForward size="27" color="#ACE2B5" />
                         </li>
                         <li>
                             <div className={classes.listTitle}>
-                                <img src={invite} alt="invite이미지입니다." className={classes.rank} />
+                                <img src={invite} alt="invite이미지입니다." className={classes.invite} />
                                 친구 초대하기
                             </div>
                             <IoIosArrowForward size="27" color="#ACE2B5" />
                         </li>
                         <li>
                             <div className={classes.listTitle}>
-                                <img src={guide} alt="guide이미지입니다." className={classes.rank} />
+                                <img src={guide} alt="guide이미지입니다." className={classes.guide} />
                                 사용가이드
                             </div>
                             <IoIosArrowForward size="27" color="#ACE2B5" />
@@ -44,21 +44,21 @@ const MyList = () => {
                     <ul className={classes.secondList}>
                         <li>
                             <div className={classes.listTitle}>
-                                <img src={announcement} alt="announcement이미지입니다." className={classes.rank} />
+                                <img src={announcement} alt="announcement이미지입니다." className={classes.announcement} />
                                 공지사항
                             </div>
                             <IoIosArrowForward size="27" color="#ACE2B5" />
                         </li>
                         <li>
                             <div className={classes.listTitle}>
-                                <img src={service_guide} alt="service_guide이미지입니다." className={classes.rank} />
+                                <img src={service_guide} alt="service_guide이미지입니다." className={classes.service_guide} />
                                 서비스 안내
                             </div>
                             <IoIosArrowForward size="27" color="#ACE2B5" />
                         </li>
                         <li>
                             <div className={classes.listTitle}>
-                                <img src={service_center} alt="service_center이미지입니다." className={classes.rank} />
+                                <img src={service_center} alt="service_center이미지입니다." className={classes.service_center} />
                                 문의/고객센터
                             </div>
                             <IoIosArrowForward size="27" color="#ACE2B5" />
