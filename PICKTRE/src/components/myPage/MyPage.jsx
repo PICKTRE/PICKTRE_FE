@@ -4,12 +4,27 @@ import Footer from "../common/Footer";
 import MyHeader from "./MyHeader";
 import MySubPost from "./MySubPost";
 import MyProfile from "./MyProfile";
+import { motion } from "framer-motion";
+
+const contentVariants = {
+  hidden: {
+    opacity: 0.3,
+  },
+  visible: {
+    opacity: 1,
+    transition: { delay: 0.3, duration: 0.5 },
+  }
+};
 
 const MyPage = () => {
   return (
-    <div className={classes.container}>
+    <div>
       <MyHeader />
-      <main className={classes.main}>
+      <motion.main
+        variants={contentVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <section className={classes.profileSection}>
           <MyProfile />
         </section>
@@ -17,7 +32,7 @@ const MyPage = () => {
           <MySubPost />
         </section>
         <MyList />
-      </main>
+      </motion.main>
       <Footer />
     </div>
   );

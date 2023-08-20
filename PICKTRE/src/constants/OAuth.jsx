@@ -1,0 +1,1 @@
+export const GOOGLE_API_KEY = import.meta.env.VITE_APP_GOOGLE_APP_KEY;
