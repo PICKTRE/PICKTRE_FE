@@ -8,6 +8,7 @@ import { GOOGLE_API_KEY } from "../../constants/OAuth";
 import classes from "./Map.module.css";
 import { motion } from "framer-motion";
 import Trash from "../../assets/Trash.png";
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   .map-container {
@@ -27,6 +28,12 @@ const contentVariants = {
 };
 
 const MapWithMarker = ({ location }) => {
+  MapWithMarker.propTypes = {
+    location: PropTypes.shape({
+      latitude: PropTypes.number.isRequired,
+      longitude: PropTypes.number.isRequired,
+    }).isRequired,
+  };
   const center = { lat: location.latitude, lng: location.longitude };
   const trashMarkers = [
     {
