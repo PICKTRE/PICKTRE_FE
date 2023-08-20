@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </AnimatePresence>
     </>
