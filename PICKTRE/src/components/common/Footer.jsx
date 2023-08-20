@@ -18,6 +18,10 @@ const Footer = () => {
         navigate("/mypage");
     }
 
+    const onClickQRcameraPage = () => {
+        navigate("/QRcamera");
+    }
+
     return (
         <footer className={classes.footer}>
             <div className={classes.LeftSection}>
@@ -30,7 +34,7 @@ const Footer = () => {
             </div>
             <div className={classes.qrSection}>
                 <div className={classes.qrImgSection}>
-                    <img src={QR} alt="푸터이미지입니다." className={classes.QR} />
+                    <img src={QR} alt="푸터이미지입니다." className={classes.QR} onClick={onClickQRcameraPage}/>
                 </div>
             </div>
             <div className={classes.LeftSection} onClick={onClickMyPage}>

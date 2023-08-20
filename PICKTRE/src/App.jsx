@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import MyPage from "./components/myPage/MyPage";
 import Map from "./components/map/Map";
 import Home from "./components/home/Home"
+import QRCamera from "./components/camera/QRcamera";
+import Trashcamera from "./components/camera/TrashCamera";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/map" element={<Map />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/qrcamera" element={<QRCamera />} />
+          <Route path="/trashcamera" element={<Trashcamera/>}/>
         </Routes>
       </AnimatePresence>
     </>
