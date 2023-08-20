@@ -7,14 +7,31 @@ import HomeMainPostText from "./HomeMainPostText";
 import HomeCard from "./HomeCard";
 import Footer from "../common/Footer";
 import cardData from "./dummy/cardData.json";
+import { motion } from "framer-motion";
 
 const Home = () => {
+
+  const contentVariants = {
+    hidden: {
+      opacity: 0.3,
+    },
+    visible: {
+      opacity: 1,
+      transition: { delay: 0.3, duration: 0.3 },
+    },
+  };
+
   return (
     <>
       <div className={classes.container}>
         <HomeHeader />
 
-        <main className={classes.main}>
+        <motion.main
+          className={classes.main}
+          variants={contentVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <section className={classes.rewardSection}>
             <HomeReward />
           </section>
@@ -43,7 +60,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-        </main>
+        </motion.main>
 
         {/* footer section */}
         <Footer />

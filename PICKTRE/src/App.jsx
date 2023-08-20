@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import MyPage from "./components/myPage/MyPage";
 import Map from "./components/map/Map";
+import Home from "./components/home/Home"
 import { AnimatePresence } from "framer-motion";
 
 function App() {
