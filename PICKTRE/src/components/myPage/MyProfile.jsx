@@ -13,7 +13,6 @@ const MyProfile = () => {
                     </ul>
                     <div className={classes.profileTier}>
                         <div className={classes.profileTierImg}></div>
-                        <div className={classes.profileTierContent}></div>
                     </div>
                 </div>
                 <button className={classes.verify}>이메일을 인증해주세요</button>

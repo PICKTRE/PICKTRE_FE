@@ -4,21 +4,29 @@
     background-color: #ffffff;
     display: flex;
     border-radius: 3px 3px 0px 0px;
-    
+
 }
 
-.pointSection{
+.LeftSection {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 74.5px;
     height: 68px;
     background-color: #ACE2B5;
+    border-radius: 5px 0px 0px 0px;
     cursor: pointer;
 }
 
-.mapSection{
+.LeftSection p {
+    font-size: 10px;
+    margin: 7px 0px 0px 0px;
+}
+
+.RightSection {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 74.5px;
@@ -28,13 +36,18 @@
     cursor: pointer;
 }
 
-.qrSection{
+.RightSection p {
+    font-size: 10px;
+    margin: 7px 0px 0px 0px;
+}
+
+.qrSection {
     width: 92px;
     height: 68px;
     background-color: #ACE2B5;
 }
 
-.qrImgSection{
+.qrImgSection {
     width: 92px;
     height: 68px;
     display: flex;
@@ -43,51 +56,33 @@
     align-items: center;
     border-radius: 0px 0px 100px 100px;
     background-color: #ffffff;
+
 }
 
-.mypageSection{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 74.5px;
-    height: 68px;
-    border-radius: 10px 0px 0px 0px;
-    background-color: #ACE2B5;
+
+.point {
+    width: 26px;
+    height: 26px;
 }
 
-.settingSection{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 74.5px;
-    height: 68px;
-    background-color: #ACE2B5;
-}
-.point{
-    width: 28px;
-    height: 42px;
-}
-
-.map{
+.map {
     width: 20px;
-    height: 42px;
+    height: 26px;
 }
 
-.QR{
+.QR {
     margin-left: 6px;
     width: 66px;
     height: 65px;
     cursor: pointer;
 }
 
-.mypage{
-    width: 46px;
-    height: 42px;
+.mypage {
+    width: 26px;
+    height: 26px;
 }
 
-.setting{
-    width: 26.5px;
-    height: 42px;
+.setting {
+    width: 26px;
+    height: 26px;
 }
