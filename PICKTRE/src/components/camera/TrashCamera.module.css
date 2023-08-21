@@ -13,17 +13,14 @@
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #3DC26F;
-    color: #ffffff;
     border: none;
     cursor: pointer;
-    border-radius: 50px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     transition: background-color 0.3s ease;
 }
 
-.captureButton:hover {
-    background-color: #299A50; /* 버튼에 호버시 배경색 변화 */
+.camera{
+    display: flex;
+    flex-direction: column;
 }

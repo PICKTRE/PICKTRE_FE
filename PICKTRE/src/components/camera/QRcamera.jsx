@@ -2,7 +2,7 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import classes from "./QRcamera.module.css";
 import Webcam from "react-webcam";
-import guide from "../../assets/guide.png"
+import cameraCapture from "../../assets/camera_capture.png"
 import { motion } from "framer-motion";
 
 
@@ -38,8 +38,10 @@ const QRcamera = () => {
                     screenshotFormat="image/jpeg"
                     mirrored={true}
                     videoConstraints={videoConstraints}
+                    width="390"
+                    height="666"
                 />
-                <img src={guide} alt="이미지" className={classes.guide} />
+                <img src={cameraCapture} alt="이미지" className={classes.camera} />
             </motion.main>
             <Footer />
         </>

@@ -62,6 +62,14 @@
     margin-top: 12px;
     background-color: #e3e3e3;
 }
+.names {
+    width: 70px;
+    height: 18px;
+    margin-top: 12px;
+    color: #29724F;
+    font-weight: 900;
+    font-size: 1rem;
+}
 
 .todayReward {
     width: 24px;
@@ -73,6 +81,11 @@
     width: 24px;
     height: 11px;
     background-color: #e3e3e3;
+}
+
+.totalRewardS{
+    width: 24px;
+    height: 11px;
 }
 
 

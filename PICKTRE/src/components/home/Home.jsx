@@ -9,6 +9,7 @@ import Footer from "../common/Footer";
 import cardData from "./dummy/cardData.json";
 import { motion } from "framer-motion";
 
+
 const Home = () => {
 
   const contentVariants = {
@@ -20,7 +21,7 @@ const Home = () => {
       transition: { delay: 0.3, duration: 0.3 },
     },
   };
-
+  
   return (
     <>
       <div className={classes.container}>
