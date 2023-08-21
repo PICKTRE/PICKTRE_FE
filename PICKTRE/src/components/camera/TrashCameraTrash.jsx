@@ -55,8 +55,8 @@ const Trashcamera = () => {
         const resultLabel = label_dict[index];
 
         if (figures.current) {
-          figures.current.innerText = `예측 결과: ${resultLabel}`;
-          if (resultLabel === "plastic") {
+          figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
+          if (resultLabel === "trash") {
             alert("확인되었습니다.");
             navigate("/home");
           }

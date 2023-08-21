@@ -4,7 +4,11 @@ import MyPage from "./components/myPage/MyPage";
 import Map from "./components/map/Map";
 import Home from "./components/home/Home"
 import QRCamera from "./components/camera/QRcamera";
-import Trashcamera from "./components/camera/TrashCamera";
+import TrashcameraPlastic from "./components/camera/TrashCameraPlastic";
+import TrashcameraGlass from "./components/camera/TrashCameraGlass";
+import TrashcameraMetal from "./components/camera/TrashCameraMetal";
+import TrashcameraPaper from "./components/camera/TrashCameraPaper";
+import TrashcameraTrash from "./components/camera/TrashCameraTrash";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -16,7 +20,12 @@ function App() {
           <Route path="/map" element={<Map />} />
           <Route path="/home" element={<Home />} />
           <Route path="/qrcamera" element={<QRCamera />} />
-          <Route path="/trashcamera" element={<Trashcamera/>}/>
+          <Route path=" " element={<TrashcameraPlastic/>}/>
+          <Route path="/trashcamera/glass" element={<TrashcameraGlass/>}/>
+          <Route path="/trashcamera/plastic" element={<TrashcameraPlastic/>}/>
+          <Route path="/trashcamera/metal" element={<TrashcameraMetal/>}/>
+          <Route path="/trashcamera/paper" element={<TrashcameraPaper/>}/>
+          <Route path="/trashcamera/trash" element={<TrashcameraTrash/>}/>
         </Routes>
       </AnimatePresence>
     </>
