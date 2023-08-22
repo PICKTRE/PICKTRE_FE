@@ -1,7 +1,7 @@
 import classes from "./Footer.module.css";
 import point from "../../assets/point.png";
 import map from "../../assets/map.png";
-import QR from "../../assets/QR.png";
+import QR from "../../assets/camera.png";
 import mypage from "../../assets/mypage.png";
 import setting from "../../assets/setting.png";
 import { useNavigate } from "react-router-dom";
@@ -21,9 +21,13 @@ const Footer = () => {
     navigate("/mypage");
   };
 
+  const onClickQRcameraPage = () => {
+    navigate("/QRcamera");
+  };
+
   return (
     <footer className={classes.footer}>
-      <div className={classes.LeftSection} onClick={onClickPoint}>
+      <div className={classes.LeftSection} onclick={onClickPoint}>
         <img src={point} alt="푸터이미지입니다." className={classes.point} />
         <p>포인트</p>
       </div>
@@ -33,7 +37,12 @@ const Footer = () => {
       </div>
       <div className={classes.qrSection}>
         <div className={classes.qrImgSection}>
-          <img src={QR} alt="푸터이미지입니다." className={classes.QR} />
+          <img
+            src={QR}
+            alt="푸터이미지입니다."
+            className={classes.QR}
+            onClick={onClickQRcameraPage}
+          />
         </div>
       </div>
       <div className={classes.LeftSection} onClick={onClickMyPage}>

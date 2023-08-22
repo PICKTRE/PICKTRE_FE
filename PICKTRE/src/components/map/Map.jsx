@@ -71,7 +71,7 @@ const MapWithMarker = ({ location }) => {
   ];
 
   return (
-    <GoogleMap zoom={16} center={center} mapContainerClassName="map-container">
+    <GoogleMap zoom={17} center={center} mapContainerClassName="map-container">
       <MarkerF
         position={center}
         icon={{
