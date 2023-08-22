@@ -4,7 +4,7 @@ import mascot from "../../assets/mascot.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const msrl = 4;
+const msrl = 2;
 
 const PointProfile = () => {
   // const [profileData, setProfileData] = useState();

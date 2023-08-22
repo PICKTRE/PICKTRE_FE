@@ -38,3 +38,12 @@
   justify-content: center;
   font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
+
+.negativePoints {
+  width: 20%;
+  height: 100%;
+  color: #dc5252;
+  display: flex;
+  justify-content: center;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
