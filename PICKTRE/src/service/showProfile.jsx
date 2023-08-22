@@ -4,7 +4,7 @@ import { BASE_URL } from "../constants/url";
 const showProfile = async ( ) => {
     try {
         const response = await axios.get(
-            `${BASE_URL}/members/3`,
+            `${BASE_URL}/members/2`,
             // {
             //     headers: {
             //         Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -77,6 +77,11 @@
     background-color: #e3e3e3;
 }
 
+.todayRewards{
+    width: 24px;
+    height: 12px;
+}
+
 .totalReward {
     width: 24px;
     height: 11px;

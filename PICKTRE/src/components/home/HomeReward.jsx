@@ -4,13 +4,13 @@ import showProfile from "../../service/showProfile";
 
 const HomeReward = () => {
   const [name, setName] = useState("");
-  // const [todayReward, setTodayReward] = useState(0);
+  const [todayReward, setTodayReward] = useState(0);
 
   useEffect(() => {
     showProfile()
       .then((data) => {
         setName(data.data.username);
-        // setTodayReward(data.data.rewardPoints);
+        setTodayReward(data.data.todayReward);
         // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
       })
       .catch((err) => {
@@ -30,7 +30,7 @@ const HomeReward = () => {
           </li>
           <li>
             오늘 하루동안 <br />
-            <b>리워드 134점</b> 모았어요!
+            <b>리워드 {todayReward}점</b> 모았어요!
           </li>
         </ul>
         <div className={classes.rewardTier}>
