@@ -1,7 +1,7 @@
 import classes from "./Footer.module.css"
 import point from "../../assets/point.png";
 import map from "../../assets/map.png";
-import QR from "../../assets/QR.png";
+import QR from "../../assets/camera.png";
 import mypage from "../../assets/mypage.png";
 import setting from "../../assets/setting.png";
 import { useNavigate } from "react-router-dom";
