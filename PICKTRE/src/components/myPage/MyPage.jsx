@@ -21,6 +21,7 @@ const MyPage = () => {
     <div>
       <MyHeader />
       <motion.main
+        className={classes.main}
         variants={contentVariants}
         initial="hidden"
         animate="visible"

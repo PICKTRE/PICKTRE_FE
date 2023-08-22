@@ -12,11 +12,14 @@
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.35",
     "@react-google-maps/api": "^2.19.2",
+    "@tensorflow/tfjs": "^4.10.0",
+    "axios": "^1.4.0",
     "framer-motion": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
+    "react-webcam": "^7.1.1",
     "styled-components": "^6.0.7"
   },
   "devDependencies": {
