@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.LeftSection} onclick={onClickPoint}>
+      <div className={classes.LeftSection} onClick={onClickPoint}>
         <img src={point} alt="푸터이미지입니다." className={classes.point} />
         <p>포인트</p>
       </div>
