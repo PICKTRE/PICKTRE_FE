@@ -9,16 +9,16 @@ import { FcGoogle } from "react-icons/fc";
 const SocialAccountButton = () => {
   // const navigate = useNavigate();
 
-  const onClickGoogleLogin = () => {
-    window.location.href ="http://picktre.duckdns.org:8080/api/google"
-  }
+  // const onClickGoogleLogin = () => {
+  //   window.location.href ="http://picktre.duckdns.org:8080/api/google"
+  // }
 
   return (
     <>
       <div className={classes.buttonKakao}>
         <img
           src={Kakaotalk}
-          alt="kakaotalk_logo"
+          alt="kakaotalk_logos"
           className={classes.kakaoLogo}
         />
       </div>
@@ -28,8 +28,8 @@ const SocialAccountButton = () => {
       <div className={classes.buttonFacebook}>
         <RiFacebookFill className={classes.facebookLogo} size="32px" />
       </div>
-      <Link to="/home">
-        <div className={classes.buttonGoogle} onClick={onClickGoogleLogin}>
+      <Link to="http://picktre.duckdns.org:8080/api/google">
+        <div className={classes.buttonGoogle}>
           <FcGoogle size="30px" />
         </div>
       </Link>
