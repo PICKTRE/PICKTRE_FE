@@ -11,7 +11,7 @@ import TrashcameraGlass from "./components/camera/TrashCameraGlass";
 import TrashcameraMetal from "./components/camera/TrashCameraMetal";
 import TrashcameraPaper from "./components/camera/TrashCameraPaper";
 import TrashcameraTrash from "./components/camera/TrashCameraTrash";
-import Benefit from "./components/benefit/benefit";
+import Benefit from "./components/benefit/Benefit";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
