@@ -111,6 +111,13 @@
     background-color: #e3e3e3;
 }
 
+.profileTierImgs{
+    width: 64px;
+    height: 68px;
+    border-radius: 100px;
+    background-color: #e3e3e3;
+}
+
 .profileTierContent {
     display: flex;
     justify-content: center;

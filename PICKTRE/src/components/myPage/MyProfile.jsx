@@ -9,6 +9,7 @@ const MyProfile = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [mail, setMail] = useState("");
   const [image, setImage] = useState("");
+  const [tierImg, setTierImg] = useState("");
 
   useEffect(() => {
     showProfile()
@@ -17,6 +18,7 @@ const MyProfile = () => {
         setTodayPoint(data.data.todayReward);
         setPoint(data.data.rewardPoints);
         setImage(data.data.picture);
+        setTierImg(data.data.tierPath);
         setMail(data.data.mail);
         setIsLoading(false);
         // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
@@ -63,7 +65,15 @@ const MyProfile = () => {
             </li>
           </ul>
           <div className={classes.profileTier}>
-            <div className={classes.profileTierImg}></div>
+            {isLoading ? (
+              <div className={classes.profileTierImg} />
+            ) : (
+              <img
+                src={tierImg}
+                alt="티어 이미지 입니다."
+                className={classes.profileImgs}
+              />
+            )}
           </div>
         </div>
         {isLoading ? (
