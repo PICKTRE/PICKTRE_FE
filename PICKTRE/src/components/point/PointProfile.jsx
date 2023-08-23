@@ -19,7 +19,7 @@ const PointProfile = () => {
       .get(`${BASE_URL}/members/${msrl}`) // GET 요청 보내기
       .then((response) => {
         // API 요청이 성공한 경우
-        console.log(response.data.data);
+        // console.log(response.data.data);
         setUserName(response.data.data.username);
         setTrashCount(response.data.data.trashCount);
         setRewardPoint(response.data.data.rewardPoints);

@@ -1,1 +1,1 @@
-export const BASE_URL = "https://www.pick-tre.com:8080/api";
+export const BASE_URL = "https://www.pick-tre.com/api";
