@@ -71,7 +71,7 @@ const MyProfile = () => {
               <img
                 src={tierImg}
                 alt="티어 이미지 입니다."
-                className={classes.profileImgs}
+                className={classes.profileTierImg}
               />
             )}
           </div>
