@@ -11,7 +11,7 @@ const SocialAccountButton = () => {
       <div className={classes.buttonKakao}>
         <img
           src={Kakaotalk}
-          alt="kakaotalk_logo"
+          alt="kakaotalk_logos"
           className={classes.kakaoLogo}
         />
       </div>
