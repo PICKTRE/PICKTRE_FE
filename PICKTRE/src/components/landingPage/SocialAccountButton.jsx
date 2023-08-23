@@ -21,8 +21,8 @@ const SocialAccountButton = () => {
       <div className={classes.buttonFacebook}>
         <RiFacebookFill className={classes.facebookLogo} size="32px" />
       </div>
-      <Link to="/home">
-        <div className={classes.buttonGoogle}>
+      <Link to="http://picktre.duckdns.org:8080/api/google">
+        <div className={classes.buttonGoogle} >
           <FcGoogle size="30px" />
         </div>
       </Link>

@@ -1,15 +1,18 @@
 import axios from "axios";
 import { BASE_URL } from "../constants/url";
+import googleProfile from "./googleProfile";
 
 const showProfile = async ( ) => {
     try {
+        const data = await googleProfile();
+        const msrl = data.data.memberId;
         const response = await axios.get(
-            `${BASE_URL}/members/2`,
-            // {
-            //     headers: {
-            //         Authorization: `Bearer ${localStorage.getItem("token")}`,
-            //     },
-            // }
+            `${BASE_URL}/members/${msrl}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+            }
         );
 
         //alert("방 생성 완료");
