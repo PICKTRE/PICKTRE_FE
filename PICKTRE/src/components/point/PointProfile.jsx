@@ -2,6 +2,7 @@ import classes from "./PointProfile.module.css";
 // import profileData from "./dummy/profileData.json";
 import mascot from "../../assets/mascot.png";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const msrl = 2;
@@ -12,6 +13,10 @@ const PointProfile = () => {
   const [rewardPoint, setRewardPoint] = useState("");
   const [trashCount, setTrashCount] = useState(0);
   const [todayReward, setTodayReward] = useState(0);
+  const navigate = useNavigate();
+  const onClickActivityReport = () => {
+    navigate("/activity-report");
+  };
 
   useEffect(() => {
     axios
@@ -62,7 +67,12 @@ const PointProfile = () => {
           <div className={classes.currentPoint}>
             보유 포인트: {rewardPoint.toLocaleString()}P
           </div>
-          <div className={classes.myActivityReport}>내 활동 리포트</div>
+          <div
+            className={classes.myActivityReport}
+            onClick={onClickActivityReport}
+          >
+            내 활동 리포트
+          </div>
         </div>
       </div>
     </>
