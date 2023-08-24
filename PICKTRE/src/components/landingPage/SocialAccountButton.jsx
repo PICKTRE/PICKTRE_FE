@@ -10,14 +10,16 @@ import { useNavigate } from "react-router-dom";
 
 const SocialAccountButton = () => {
   const navigate = useNavigate();
-  
+
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const handleGoogleClick = async () => {
-    window.location.href="https://www.pick-tre.com/api/google"
     try {
-      const profileData = await googleProfile();
-      // 여기서 페이지 리다이렉션 또는 다른 작업을 수행할 수 있습니다.
-      console.log("Profile data:", profileData);
-      navigate("/home");
+      const profileData = await googleProfile(); // googleProfile 함수를 호출하여 memberId 값을 가져옴
+      // setIsLoggedIn(true); // 로그인 상태를 true로 설정
+      localStorage.setItem("memberId", profileData.data.memberId); // memberId 값을 localStorage에 저장
+      console.log(profileData.memberId);
+      navigate("/home"); // home 페이지로 이동
     } catch (error) {
       console.error("Error fetching data:", error);
     }
