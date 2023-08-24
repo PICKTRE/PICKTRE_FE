@@ -20,6 +20,7 @@ const MyProfile = () => {
         setImage(data.data.picture);
         setTierImg(data.data.tierPath);
         setMail(data.data.mail);
+        setTierImg(data.data.tierPath);
         setIsLoading(false);
         // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
       })

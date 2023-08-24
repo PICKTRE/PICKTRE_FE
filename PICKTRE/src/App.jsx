@@ -11,10 +11,10 @@ import TrashcameraGlass from "./components/camera/TrashCameraGlass";
 import TrashcameraMetal from "./components/camera/TrashCameraMetal";
 import TrashcameraPaper from "./components/camera/TrashCameraPaper";
 import TrashcameraTrash from "./components/camera/TrashCameraTrash";
+import Store from "./components/store/Store";
 import ActivityReport from "./components/myUseReport/MyUseReport";
 import TrashcameraMedical from "./components/camera/TrashCameraMedical";
 import Benefit from "./components/benefit/Benefit";
-
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
           <Route path="/trashcamera/trash" element={<TrashcameraTrash />} />
           <Route path="/trashcamera/medical" element={<TrashcameraMedical />} />
           <Route path="/benefit" element={<Benefit />} />
+          <Route path="/store" element={<Store />} />
           <Route path="/activity-report" element={<ActivityReport />} />
         </Routes>
       </AnimatePresence>
