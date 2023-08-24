@@ -3,14 +3,13 @@ import { BASE_URL } from "../constants/url";
 
 const googleProfile = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/google`, 
-    // {
-    //   headers: {
-    //     Authorization: `Bearer ${localStorage.getItem("token")}`,
-    //   },
-    // }
-    );
-    localStorage.setItem("token", response.data.token);
+    const response = await axios.get(`${BASE_URL}/google`, {
+      withCredentials: true,
+      //   headers: {
+      //     Authorization: `Bearer ${localStorage.getItem("token")}`,
+      //   },
+    });
+    // localStorage.setItem("token", response.data.token);
     return response.data;
   } catch (error) {
     console.error(error);
