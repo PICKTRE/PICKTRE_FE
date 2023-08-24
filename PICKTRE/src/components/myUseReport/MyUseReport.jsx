@@ -2,6 +2,8 @@ import classes from "./MyUseReport.module.css";
 import MyUseReportHeader from "./MyUseReportHeader";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
+import ActivityGraph from "./activityGraph";
+import BadgeTitle from "./badgeTitle";
 
 const ActivityReport = () => {
   const contentVariants = {
@@ -23,7 +25,17 @@ const ActivityReport = () => {
         initial="hidden"
         animate="visible"
       >
-        <div></div>
+        <section className={classes.badgeSection}>
+          <BadgeTitle />
+        </section>
+        <section className={classes.activitySection}>
+          <p>
+            픽트리님의
+            <br />
+            쓰레기수거 활동 분석입니다.
+          </p>
+          <ActivityGraph />
+        </section>
       </motion.main>
       <Footer />
     </>
