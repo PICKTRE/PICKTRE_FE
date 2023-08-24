@@ -1,17 +1,16 @@
 import classes from "./StoreGoods.module.css";
-import PropTypes from "prop-types";
 // import photo from "../../assets/storeSpringNote.png";
 
-const StoreGoods = ({ rank, photo, cardMainText, price }) => {
+const StoreGoods = ({ isRank, productRank, imagePath, productName, price }) => {
   return (
     <>
       <div className={classes.cardComponentWrapper}>
-        {rank && <div className={classes.cardBadge}>{rank}</div>}
+        {isRank && <div className={classes.cardBadge}>{productRank}</div>}
         <div className={classes.card}>
           <div
             className={classes.cardPhoto}
             style={{
-              backgroundImage: `url(${photo})`,
+              backgroundImage: `url(${imagePath})`,
               top: !price ? "5px" : null,
             }}
           />
@@ -19,7 +18,7 @@ const StoreGoods = ({ rank, photo, cardMainText, price }) => {
             className={classes.cardMainText}
             style={!price ? { margin: 0, top: 0 } : null}
           >
-            {cardMainText}
+            {productName}
           </div>
           {price && (
             <div className={classes.cardSubText}>{price.toLocaleString()}P</div>
@@ -28,13 +27,6 @@ const StoreGoods = ({ rank, photo, cardMainText, price }) => {
       </div>
     </>
   );
-};
-
-StoreGoods.propsTypes = {
-  rank: PropTypes.node.isRequired,
-  photo: PropTypes.node.isRequired,
-  cardMainText: PropTypes.node.isRequired,
-  price: PropTypes.node.isRequired,
 };
 
 export default StoreGoods;

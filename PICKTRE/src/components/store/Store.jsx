@@ -5,8 +5,14 @@ import classes from "./Store.module.css";
 import StoreSearching from "./StoreSearching";
 import StorePopular from "./StorePopular";
 import StoreOther from "./StoreOther";
+import axios from "axios";
+import { useState, useEffect, useCallback } from "react";
+import { BASE_URL } from "../../constants/url";
 
 const Store = () => {
+  const [popularProducts, setPopularProducts] = useState([]);
+  const [otherProducts, setOtherProducts] = useState([]);
+
   const contentVariants = {
     hidden: {
       opacity: 0.3,
@@ -16,6 +22,30 @@ const Store = () => {
       transition: { delay: 0.3, duration: 0.1 },
     },
   };
+
+  const fetchData = useCallback(() => {
+    axios
+      .get(`${BASE_URL}/products`)
+      .then((response) => {
+        // 모든 products를 가져옴
+        const allProducts = response.data.list;
+        // viewCount가 많은 상위 3개만 추출해 popularProducts에 저장
+        const sortedProducts = allProducts.sort(
+          (a, b) => b.viewCount - a.viewCount
+        );
+        setPopularProducts(sortedProducts.slice(0, 3));
+
+        // popularProducts를 제외한 나머지 products를 추출해 otherProducts에 저장
+        setOtherProducts(sortedProducts.slice(3, sortedProducts.length));
+      })
+      .catch((error) => {
+        console.error("API 요청 실패:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   return (
     <>
@@ -30,10 +60,12 @@ const Store = () => {
           <StoreSearching />
         </section>
         <section className={classes.popularSection}>
-          <StorePopular />
+          {popularProducts.length > 0 && (
+            <StorePopular products={popularProducts} />
+          )}
         </section>
         <section className={classes.otherSection}>
-          <StoreOther />
+          {otherProducts.length > 0 && <StoreOther products={otherProducts} />}
         </section>
       </motion.main>
       <Footer />
