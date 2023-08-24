@@ -14,6 +14,9 @@ const MyList = () => {
   const onClickBenefit = () => {
     navigate("/benefit");
   };
+  const onClickActivityReport = () => {
+    navigate("/activity-report");
+  };
   return (
     <section className={classes.listSection}>
       <ul className={classes.firstList}>
@@ -25,7 +28,7 @@ const MyList = () => {
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
         <li>
-          <div className={classes.listTitle}>
+          <div className={classes.listTitle} onClick={onClickActivityReport}>
             <img
               src={report}
               alt="report이미지입니다."

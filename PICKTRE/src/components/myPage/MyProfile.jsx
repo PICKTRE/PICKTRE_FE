@@ -1,6 +1,6 @@
 import classes from "./MyProfile.module.css";
 import { useEffect, useState } from "react";
-import showProfile  from "../../service/showProfile";
+import showProfile from "../../service/showProfile";
 
 const MyProfile = () => {
   const [name, setName] = useState("");
@@ -18,6 +18,7 @@ const MyProfile = () => {
         setTodayPoint(data.data.todayReward);
         setPoint(data.data.rewardPoints);
         setImage(data.data.picture);
+        setTierImg(data.data.tierPath);
         setMail(data.data.mail);
         setTierImg(data.data.tierPath);
         setIsLoading(false);
@@ -68,7 +69,11 @@ const MyProfile = () => {
             {isLoading ? (
               <div className={classes.profileTierImg} />
             ) : (
-              <img src={tierImg} alt="tier" className={classes.profileTierImg} />
+              <img
+                src={tierImg}
+                alt="티어 이미지 입니다."
+                className={classes.profileTierImg}
+              />
             )}
           </div>
         </div>

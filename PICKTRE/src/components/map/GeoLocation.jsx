@@ -31,7 +31,7 @@ export const useGeoLocation = () => {
     // 일정 간격마다 위치 업데이트하기
     const updateInterval = setInterval(() => {
       geolocation.getCurrentPosition(handleSuccess, handleError);
-    }, 1000); // 10초마다 업데이트 (원하는 간격으로 조절)
+    }, 1000);
 
     return () => {
       clearInterval(updateInterval); // 컴포넌트 언마운트 시 간격 업데이트 중지

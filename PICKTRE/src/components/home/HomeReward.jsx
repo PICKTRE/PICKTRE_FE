@@ -5,12 +5,14 @@ import showProfile from "../../service/showProfile";
 const HomeReward = () => {
   const [name, setName] = useState("");
   const [todayReward, setTodayReward] = useState(0);
+  const [tierImg, setTierImg] = useState("");
 
   useEffect(() => {
     showProfile()
       .then((data) => {
         setName(data.data.username);
         setTodayReward(data.data.todayReward);
+        setTierImg(data.data.tierPath);
         // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
       })
       .catch((err) => {
@@ -18,7 +20,6 @@ const HomeReward = () => {
         setIsLoading(false);
       });
   }, []);
-
 
   return (
     <div className={classes.rewardSection}>
@@ -34,8 +35,11 @@ const HomeReward = () => {
           </li>
         </ul>
         <div className={classes.rewardTier}>
-          <div className={classes.rewardTierImg}></div>
-          <div className={classes.rewardTierContent}></div>
+          <img
+            src={tierImg}
+            alt="티어이미지입니다."
+            className={classes.rewardTierImgs}
+          />
         </div>
       </div>
     </div>

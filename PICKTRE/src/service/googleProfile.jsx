@@ -8,8 +8,6 @@ const googleProfile = async () => {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
-
-    //alert("방 생성 완료");
     return response.data;
   } catch (error) {
     console.error(error);
