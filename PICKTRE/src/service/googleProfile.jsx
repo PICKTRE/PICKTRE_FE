@@ -8,6 +8,7 @@ const googleProfile = async () => {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
+    localStorage.setItem("token", response.data.token);
     return response.data;
   } catch (error) {
     console.error(error);
