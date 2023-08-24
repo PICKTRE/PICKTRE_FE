@@ -6,7 +6,7 @@ import photo2 from "../../assets/storePencil.png";
 import photo3 from "../../assets/storeBag.png";
 import photo4 from "../../assets/storeRing.png";
 
-const StoreOther = () => {
+const StoreOther = ({ products }) => {
   return (
     <>
       <div>
@@ -14,10 +14,13 @@ const StoreOther = () => {
           <StoreDividingLine text="Other" />
         </div>
         <div className={classes.otherGoods}>
-          <StoreGoods photo={photo1} cardMainText="PICKTRE Bracelet" />
-          <StoreGoods photo={photo2} cardMainText="PICKTRE Pen" />
-          <StoreGoods photo={photo3} cardMainText="PICKTRE Bag" />
-          <StoreGoods photo={photo4} cardMainText="PICKTRE Keyring" />
+          {products.map((product, index) => (
+            <StoreGoods
+              key={index}
+              imagePath={product.imagePath}
+              productName={product.productName}
+            />
+          ))}
         </div>
       </div>
     </>
