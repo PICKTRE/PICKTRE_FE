@@ -4,6 +4,7 @@ import mascot from "../../assets/mascot.png";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../../constants/url";
 
 const msrl = 2;
 
@@ -20,10 +21,10 @@ const PointProfile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://118.67.131.231:8080/api/members/${msrl}`) // GET 요청 보내기
+      .get(`${BASE_URL}/members/${msrl}`) // GET 요청 보내기
       .then((response) => {
         // API 요청이 성공한 경우
-        console.log(response.data.data);
+        // console.log(response.data.data);
         setUserName(response.data.data.username);
         setTrashCount(response.data.data.trashCount);
         setRewardPoint(response.data.data.rewardPoints);
