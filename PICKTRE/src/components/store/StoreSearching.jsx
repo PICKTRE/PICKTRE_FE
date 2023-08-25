@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import showProfile from "../../service/showProfile";
 
 const StoreSearching = () => {
-
   const [name, setName] = useState("");
   const [point, setPoint] = useState(0);
 
@@ -24,7 +23,11 @@ const StoreSearching = () => {
     <>
       <div className={classes.searching}>
         <div className={classes.searchingTitle}>
-          <input type="text" placeholder="검색하실 제품을 입력해주세요" className={classes.searchEngine} />
+          <input
+            type="text"
+            placeholder="검색하실 제품을 입력해주세요"
+            className={classes.searchEngine}
+          />
         </div>
         <div className={classes.searchingBar}>
           추천 인기 제품

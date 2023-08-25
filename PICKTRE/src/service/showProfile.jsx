@@ -7,7 +7,7 @@ const showProfile = async () => {
     // const data = await googleProfile();
     // const msrl = data.data.memberId;
     const response = await axios.get(
-      `${BASE_URL}/members/2`,
+      `${BASE_URL}/members/1`
       // {
       //     headers: {
       //         Authorization: `Bearer ${localStorage.getItem("memberId")}`,

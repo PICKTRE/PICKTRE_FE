@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 
-const msrl = 2;
+const msrl = 1;
 
 const PointProfile = () => {
   // const [profileData, setProfileData] = useState();
