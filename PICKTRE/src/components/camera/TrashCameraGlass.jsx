@@ -35,9 +35,10 @@ const Trashcamera = () => {
 
   const run = async () => {
     await loadModel();
-    const webcam = await tf.data.navigator.mediaDevices.getUserMedia({
-      video: { facingMode: 'environment' }, // change to 'user' for front-facing camera
-  });
+    const webcam = await tf.data.webcam(camera.current, {
+      resizeWidth: 224,
+      resizeHeight: 224,
+    });
   
     const frameInterval = 500; // 프레임 해제 간격 (밀리초)
     let lastFrameTime = performance.now();
@@ -59,7 +60,7 @@ const Trashcamera = () => {
   
         if (figures.current) {
           figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
-          if (resultLabel === "glass") {
+          if (resultLabel === "medical") {
             alert("확인되었습니다.");
             navigate("/home");
             return () => {
