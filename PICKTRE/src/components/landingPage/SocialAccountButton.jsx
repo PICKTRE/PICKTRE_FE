@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { RiFacebookFill } from "react-icons/ri";
 import { SiNaver } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
 import googleProfile from "../../service/googleProfile";
 import { useNavigate } from "react-router-dom";
 
