@@ -8,11 +8,11 @@ const showProfile = async () => {
     const msrl = data.data.memberId;
     const response = await axios.get(
       `${BASE_URL}/members/${msrl}`,
-      // {
-      //     headers: {
-      //         Authorization: `Bearer ${localStorage.getItem("memberId")}`,
-      //     },
-      // }
+    //   {
+    //       headers: {
+    //           Authorization: `Bearer ${localStorage.getItem("memberId")}`,
+    //       },
+    //   }
     );
 
     //alert("방 생성 완료");
