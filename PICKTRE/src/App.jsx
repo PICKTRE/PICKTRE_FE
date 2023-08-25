@@ -15,6 +15,7 @@ import Store from "./components/store/Store";
 import ActivityReport from "./components/myUseReport/MyUseReport";
 import TrashcameraMedical from "./components/camera/TrashCameraMedical";
 import Benefit from "./components/benefit/Benefit";
+import Ranking from "./components/ranking/Ranking";
 import Callback from "./components/landingPage/Callback";
 import InviteFriends from "./components/inviteFriends/InviteFriends";
 import Notice from "./components/notice/Notice";
@@ -40,6 +41,7 @@ function App() {
           <Route path="/trashcamera/trash" element={<TrashcameraTrash />} />
           <Route path="/trashcamera/medical" element={<TrashcameraMedical />} />
           <Route path="/benefit" element={<Benefit />} />
+          <Route path="/ranking" element={<Ranking />} />
           <Route path="/store" element={<Store />} />
           <Route path="/activity-report" element={<ActivityReport />} />
           <Route path="/login" element={<Callback />} />

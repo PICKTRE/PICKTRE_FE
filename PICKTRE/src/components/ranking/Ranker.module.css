@@ -1,0 +1,28 @@
+.rankFirst {
+  background-color: #74EBD5;
+  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.rankerSection {
+  background-color: white;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  height: 20%;
+  margin: 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank {
+  width: 15%;
+}
+
+.name {
+  width: 60%;
+}
+
+.count {
+  width: 10%;
+}
