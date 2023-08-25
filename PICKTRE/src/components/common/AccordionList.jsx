@@ -1,7 +1,7 @@
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import chevronDown from "./chevron-down.svg";
-import classes from "./QnaList.module.css";
-import qnaData from "./dummy/qnaData.json";
+import classes from "./AccordionList.module.css";
+// import qnaData from "./dummy/qnaData.json";
 
 // eslint-disable-next-line react/prop-types
 const AccordionItem = ({ header, ...rest }) => (
@@ -23,12 +23,14 @@ const AccordionItem = ({ header, ...rest }) => (
   />
 );
 
-const QnaList = () => {
+// eslint-disable-next-line react/prop-types
+const AccordionList = ({ dummyData }) => {
   return (
     <>
       <div className={classes.accordion}>
         <Accordion transition transitionTimeout={250}>
-          {qnaData.map((data, index) => (
+          {/* eslint-disable-next-line react/prop-types */}
+          {dummyData.map((data, index) => (
             <AccordionItem key={index} header={data.header}>
               {data.content}
             </AccordionItem>
@@ -39,4 +41,4 @@ const QnaList = () => {
   );
 };
 
-export default QnaList;
+export default AccordionList;

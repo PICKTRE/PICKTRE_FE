@@ -1,8 +1,9 @@
 import QnaHeader from "./QnaHeader";
-import QnaList from "./QnaList";
+import AccordionList from "../common/AccordionList";
 import Footer from "../common/Footer";
 import classes from "./Qna.module.css";
 import { motion } from "framer-motion";
+import dummyData from "./dummy/qnaData.json";
 
 const contentVariants = {
   hidden: {
@@ -33,7 +34,7 @@ const Qna = () => {
               </div>
             </div>
 
-            <QnaList />
+            <AccordionList dummyData={dummyData} />
           </div>
         </motion.main>
         <Footer />
