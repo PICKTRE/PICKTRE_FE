@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 
-const msrl = 2;
+const msrl = 1;
 const places = [
   "동성로 2.28 공원",
   "대구 중구청",

@@ -1,6 +1,7 @@
 import classes from "./StoreGoods.module.css";
 // import photo from "../../assets/storeSpringNote.png";
 
+// eslint-disable-next-line react/prop-types
 const StoreGoods = ({ isRank, productRank, imagePath, productName, price }) => {
   return (
     <>
