@@ -40,7 +40,7 @@ const Trashcamera = () => {
     const webcam = await tf.data.webcam(camera.current, {
       resizeWidth: 224,
       resizeHeight: 224,
-      video: { facingMode: 'environment' },
+      facingMode: 'environment',
     });
   
     const frameInterval = 500; // 프레임 해제 간격 (밀리초)
