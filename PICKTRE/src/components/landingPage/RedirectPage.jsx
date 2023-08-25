@@ -19,14 +19,14 @@ const RedirectPage = () => {
 
     // 추출한 accessToken 값을 localStorage에 저장
     useEffect(() => {
-        // memberId 값을 localStorage에서 가져옴
-        const memberId = localStorage.getItem('memberId');
-
+        // memberId 값을 localStorage에 저장
+        localStorage.setItem('memberId', memberId);
+        console.log("저장완료");
         // memberId가 유효하다면 /home 페이지로 이동
         if (memberId) {
             navigate('/home');
         }
-    }, [navigate]);
+    }, [navigate, memberId]);
 
     return (
         <>접속중</>
