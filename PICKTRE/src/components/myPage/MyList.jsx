@@ -26,6 +26,9 @@ const MyList = () => {
   const onClickNotice = () => {
     navigate("/notice");
   };
+  const onClickInformService = () => {
+    navigate("/inform-service");
+  };
 
   const onClickAlert = () => {
     alert("추후에 업데이트 될 서비스입니다.");
@@ -87,7 +90,7 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li onClick={onClickAlert}>
+        <li onClick={onClickInformService}>
           <div className={classes.listTitle}>
             <img
               src={service_guide}

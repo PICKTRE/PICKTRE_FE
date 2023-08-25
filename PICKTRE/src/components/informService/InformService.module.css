@@ -1,0 +1,29 @@
+.main {
+  width: 390px;
+  height: 646.5px;
+  background-color: #fff;
+}
+
+.informServiceSection {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.informServiceMainText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  margin-left: 25px;
+  gap: 5px;
+  margin-right: 25px;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+  font-size: 1.5rem;
+}
+
+.informServiceSubText {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: gray;
+}

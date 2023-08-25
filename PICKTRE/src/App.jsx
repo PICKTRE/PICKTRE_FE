@@ -19,6 +19,7 @@ import Ranking from "./components/ranking/Ranking";
 import Callback from "./components/landingPage/Callback";
 import InviteFriends from "./components/inviteFriends/InviteFriends";
 import Notice from "./components/notice/Notice";
+import InformService from "./components/informService/InformService";
 import Qna from "./components/qna/Qna";
 import RedirectPage from "./components/landingPage/RedirectPage";
 import { AnimatePresence } from "framer-motion";
@@ -47,6 +48,7 @@ function App() {
           <Route path="/login" element={<Callback />} />
           <Route path="/invite-friends" element={<InviteFriends />}></Route>
           <Route path="/notice" element={<Notice />}></Route>
+          <Route path="/inform-service" element={<InformService />}></Route>
           <Route path="/qna" element={<Qna />}></Route>
           <Route path="/oauth/redirected/google" element={<RedirectPage />} />
         </Routes>
