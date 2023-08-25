@@ -23,6 +23,9 @@ const MyList = () => {
   const onClickQna = () => {
     navigate("/qna");
   };
+  const onClickNotice = () => {
+    navigate("/notice");
+  };
 
   const onClickAlert = () => {
     alert("추후에 업데이트 될 서비스입니다.");
@@ -73,7 +76,7 @@ const MyList = () => {
         </li>
       </ul>
       <ul className={classes.secondList}>
-        <li onClick={onClickAlert}>
+        <li onClick={onClickNotice}>
           <div className={classes.listTitle}>
             <img
               src={announcement}

@@ -31,7 +31,17 @@ const AccordionList = ({ dummyData }) => {
         <Accordion transition transitionTimeout={250}>
           {/* eslint-disable-next-line react/prop-types */}
           {dummyData.map((data, index) => (
-            <AccordionItem key={index} header={data.header}>
+            <AccordionItem
+              key={index}
+              header={
+                <div>
+                  {data.header}
+                  {data.subHeader && (
+                    <p className={classes.subHeader}>{data.subHeader}</p>
+                  )}
+                </div>
+              }
+            >
               {data.content}
             </AccordionItem>
           ))}
