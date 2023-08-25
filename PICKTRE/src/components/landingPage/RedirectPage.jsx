@@ -1,31 +1,35 @@
-import googleProfile from "../../service/googleProfile";
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const RedirectPage = () => {
-    const location = useLocation();
     const navigate = useNavigate();
 
-    const handleOAuthGoogle = async () => {
-        try {
-            // 카카오로부터 받아온 code를 서버에 전달하여 카카오로 회원가입 & 로그인한다
-            const response = await googleProfile();
-            const data = response.data; // 응답 데이터
-            alert("로그인 성공: " + data)
-            navigate("/home");
-        } catch (error) {
-            alert("로그인 실패");
-            navigate("/");
-        }
-    };
+    function getQueryParamValue(key) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(key);
+    }
 
+    // memberId와 accessToken 값을 추출
+    const memberId = getQueryParamValue('memberId');
+    const accessToken = getQueryParamValue('accessToken');
 
+    // 추출한 값들을 활용
+    console.log('Member ID:', memberId);
+    console.log('Access Token:', accessToken);
+
+    // 추출한 accessToken 값을 localStorage에 저장
     useEffect(() => {
-       handleOAuthGoogle();
-    }, [location]);
+        // memberId 값을 localStorage에서 가져옴
+        const memberId = localStorage.getItem('memberId');
+
+        // memberId가 유효하다면 /home 페이지로 이동
+        if (memberId) {
+            navigate('/home');
+        }
+    }, [navigate]);
 
     return (
-        <></>
+        <>접속중</>
     )
 }
 
