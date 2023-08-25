@@ -1,0 +1,26 @@
+.main {
+  width: 390px;
+  height: 646.15px;
+  background-color: #fff;
+}
+
+.noticeSection {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.noticeMainText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+  font-size: 1.5rem;
+}
+
+.noticeSubText {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: gray;
+}
