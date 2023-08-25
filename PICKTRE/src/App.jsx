@@ -16,6 +16,7 @@ import ActivityReport from "./components/myUseReport/MyUseReport";
 import TrashcameraMedical from "./components/camera/TrashCameraMedical";
 import Benefit from "./components/benefit/Benefit";
 import Callback from "./components/landingPage/Callback";
+import InviteFriends from "./components/inviteFriends/InviteFriends";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
           <Route path="/benefit" element={<Benefit />} />
           <Route path="/store" element={<Store />} />
           <Route path="/activity-report" element={<ActivityReport />} />
-          <Route path="/login" element={<Callback/>}/>
+          <Route path="/login" element={<Callback />} />
+          <Route path="/invite-friends" element={<InviteFriends />}></Route>
         </Routes>
       </AnimatePresence>
     </>

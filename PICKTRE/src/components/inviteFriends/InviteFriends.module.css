@@ -1,0 +1,8 @@
+.main {
+  width: 390px;
+  height: 646.5px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
