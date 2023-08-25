@@ -66,11 +66,11 @@ const Store = () => {
                 </section>
                 <section className={classes.popularSection}>
                     {popularProducts.length > 0 && (
-                        <StorePopular products={popularProducts} />
+                        <StorePopular products={popularProducts} isLoading={isLoading} />
                     )}
                 </section>
                 <section className={classes.otherSection}>
-                    {otherProducts.length > 0 && <StoreOther products={otherProducts} />}
+                    {otherProducts.length > 0 && <StoreOther products={otherProducts} isLoading={isLoading} />}
                 </section>
             </motion.main>
             <Footer />

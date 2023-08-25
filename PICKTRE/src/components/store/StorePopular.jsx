@@ -2,7 +2,7 @@ import classes from "./StorePopular.module.css";
 import StoreGoods from "./StoreGoods";
 import StoreDividingLine from "./StoreDividingLine";
 
-const StorePopular = ({ products }) => {
+const StorePopular = ({ products, isLoading }) => {
   return (
     <>
       <div>
