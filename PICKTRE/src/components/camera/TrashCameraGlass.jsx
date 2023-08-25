@@ -30,7 +30,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    net = await tf.loadLayersModel("../../../build/ResNet50V2_fine_tuned.json/model.json");
+    net = await tf.loadLayersModel("../../../public/ResNet50V2_fine_tuned/model.json");
   };
 
   const run = async () => {
@@ -60,7 +60,7 @@ const Trashcamera = () => {
   
         if (figures.current) {
           figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
-          if (resultLabel === "medical") {
+          if (resultLabel === "glass") {
             alert("확인되었습니다.");
             navigate("/home");
             return () => {
