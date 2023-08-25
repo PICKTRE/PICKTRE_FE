@@ -35,10 +35,9 @@ const Trashcamera = () => {
 
   const run = async () => {
     await loadModel();
-    const webcam = await tf.data.webcam(camera.current, {
-      resizeWidth: 224,
-      resizeHeight: 224,
-    });
+    const webcam = await tf.data.navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'environment' }, // change to 'user' for front-facing camera
+  });
   
     const frameInterval = 500; // 프레임 해제 간격 (밀리초)
     let lastFrameTime = performance.now();
