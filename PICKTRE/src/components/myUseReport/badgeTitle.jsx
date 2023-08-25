@@ -7,28 +7,41 @@ const badgeTitle = () => {
 
   const [name, setName] = useState("");
   const [tierImg, setTierImg] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     showProfile()
       .then((data) => {
         setName(data.data.username);
         setTierImg(data.data.tierPath);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <>
       <div className={classes.badgeTitle}>
-        <p>
-          {name}님,
-          <br />
-          획득한 뱃지 현황입니다.
-        </p>
+        {isLoading ?
+          (<div className={classes.titles} />) :
+          (
+            <p>
+              {name}님,
+              <br />
+              획득한 뱃지 현황입니다.
+            </p>
+          )
+        }
         <div className={classes.badgeSection}>
-          <div className={classes.badgeImgSection}><img src={tierImg} alt="티어 이미지입니다." className={classes.tierImg}/></div>
+          <div className={classes.badgeImgSection}>
+            {isLoading ?
+              (<div className={classes.tierImgs} />) :
+              (<img src={tierImg} alt="티어 이미지입니다." className={classes.tierImg} />)
+            }
+          </div>
           <div className={classes.badgeImgSection}></div>
           <div className={classes.badgeImgSection}></div>
         </div>

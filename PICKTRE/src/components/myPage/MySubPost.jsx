@@ -7,11 +7,15 @@ const MySubPost = () => {
         navigate("/store");
     }
 
+    const onClickAlert = () => {
+        alert("추후에 업데이트 될 서비스 입니다.")
+    }
+
     return (
         <div className={classes.subButton}>
-            <div className={classes.ranking}>랭킹</div>
+            <div className={classes.ranking} onClick={onClickAlert}>랭킹</div>
             <div className={classes.store} onClick={onClickStore}>스토어</div>
-            <div className={classes.mission}>미션</div>
+            <div className={classes.mission} onClick={onClickAlert}>미션</div>
         </div>
     )
 }

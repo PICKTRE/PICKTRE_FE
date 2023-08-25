@@ -1,22 +1,21 @@
 import classes from "./StoreSearching.module.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import { BASE_URL } from "../../constants/url";
+import showProfile from "../../service/showProfile";
 
 const StoreSearching = () => {
-  const msrl = 1;
-  const [userName, setUserName] = useState("");
-  const [rewardPoint, setRewardPoint] = useState("");
+  const [name, setName] = useState("");
+  const [point, setPoint] = useState(0);
+
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}/members/${msrl}`) // GET 요청 보내기
-      .then((response) => {
-        setUserName(response.data.data.username);
-        setRewardPoint(response.data.data.rewardPoints);
+    showProfile()
+      .then((data) => {
+        setName(data.data.username);
+        setPoint(data.data.rewardPoints);
+        // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
       })
-      .catch((error) => {
-        console.error("API 요청 실패:", error);
+      .catch((err) => {
+        console.log(err);
       });
   }, []);
 
@@ -37,11 +36,11 @@ const StoreSearching = () => {
         </div>
       </div>
       <div className={classes.currentPoint}>
-        {userName}님의
+        {name}님,
         <br />
         현재 보유포인트
         <br />
-        <p>{rewardPoint}P</p>
+        <p>{point}P</p>
       </div>
     </>
   );

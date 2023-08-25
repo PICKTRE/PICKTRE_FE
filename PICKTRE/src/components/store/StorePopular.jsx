@@ -7,7 +7,7 @@ import { BASE_URL } from "../../constants/url";
 import axios from "axios";
 
 // eslint-disable-next-line react/prop-types
-const StorePopular = ({ products }) => {
+const StorePopular = ({ products, isLoading }) => {
   const msrl = 1;
   // 각 상품에 대한 모달 상태 배열
   const [modalOpenStates, setModalOpenStates] = useState(
@@ -74,6 +74,7 @@ const StorePopular = ({ products }) => {
                 imagePath={product.imagePath}
                 price={product.price}
                 productName={product.productName}
+                isLoading={false}
               />
               <StoreGoodsModal
                 isOpen={modalOpenStates[index]}

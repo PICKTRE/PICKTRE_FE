@@ -4,6 +4,8 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { VITE_MODEL_URL } from "../../constants/OAuth";
+import cameraReward from "../../service/cameraReward";
 import * as tf from "@tensorflow/tfjs";
 
 const Trashcamera = () => {
@@ -30,7 +32,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    net = await tf.loadLayersModel("../../../build/ResNet50V2_fine_tuned.json/model.json");
+    net = await tf.loadLayersModel(`${VITE_MODEL_URL}`);
   };
 
   const run = async () => {
@@ -38,6 +40,7 @@ const Trashcamera = () => {
     const webcam = await tf.data.webcam(camera.current, {
       resizeWidth: 224,
       resizeHeight: 224,
+      facingMode: 'environment',
     });
   
     const frameInterval = 500; // 프레임 해제 간격 (밀리초)
@@ -60,12 +63,19 @@ const Trashcamera = () => {
   
         if (figures.current) {
           figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
-          if (resultLabel === "medical") {
-            alert("확인되었습니다.");
-            navigate("/home");
-            return () => {
-              isRunning = false;
-            };
+          if (resultLabel === "glass") {
+            try {
+              const createResponse = await cameraReward(2, "glass", 500);
+              console.log(createResponse);
+              alert("확인되었습니다.");
+              navigate("/home");
+              return () => {
+                isRunning = false;
+              };
+              // Handle createResponse if needed
+            } catch (error) {
+              console.error("Camera reward creation error:", error);
+            }
           }
         }
   

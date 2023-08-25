@@ -2,7 +2,11 @@ import classes from "./InviteFriends.module.css";
 import InviteFriendsHeader from "./InviteFriendsHeader";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
+import inviteP from "../../assets/inviteP.png";
 import InviteFriendsButton from "./InviteFriendsButton";
+import { useState, useEffect } from "react";
+import showProfile from "../../service/showProfile";
+import friends_profile from "../../assets/friends_profile.png";
 
 const contentVariants = {
   hidden: {
@@ -15,6 +19,26 @@ const contentVariants = {
 };
 
 const InviteFriends = () => {
+
+
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [image, setImage] = useState("");
+
+
+  useEffect(() => {
+    showProfile()
+      .then((data) => {
+        setImage(data.data.picture);
+        setIsLoading(false);
+        // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <div>
@@ -25,7 +49,18 @@ const InviteFriends = () => {
           initial="hidden"
           animate="visible"
         >
-          <InviteFriendsButton />
+          <div className={classes.whiteSection} />
+          <img src={inviteP} alt="소개 이미지" className={classes.imgs} />
+          <section className={classes.profileSection}>
+            {isLoading ? 
+            (<div className={classes.Myprofile} />) : 
+            (<img src={image} className={classes.Myprofile} />)
+            }
+            <img src={friends_profile} alt="친구 이미지" className={classes.Otherprofile} />
+          </section>
+          <section className={classes.lastSection}>
+            <InviteFriendsButton />
+          </section>
         </motion.main>
         <Footer />
       </div>

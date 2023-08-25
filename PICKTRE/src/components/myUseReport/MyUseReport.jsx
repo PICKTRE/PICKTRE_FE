@@ -4,6 +4,8 @@ import Footer from "../common/Footer";
 import { motion } from "framer-motion";
 import ActivityGraph from "./activityGraph";
 import BadgeTitle from "./badgeTitle";
+import showProfile from "../../service/showProfile";
+import { useEffect, useState } from "react";
 
 const ActivityReport = () => {
   const contentVariants = {
@@ -15,6 +17,21 @@ const ActivityReport = () => {
       transition: { delay: 0.3, duration: 0.5 },
     },
   };
+
+  const [name, setName] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    showProfile()
+      .then((data) => {
+        setName(data.data.username);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
+  }, []);
 
   return (
     <>
@@ -29,11 +46,14 @@ const ActivityReport = () => {
           <BadgeTitle />
         </section>
         <section className={classes.activitySection}>
-          <p>
-            픽트리님의
+          {isLoading ? 
+          (<div className={classes.activities}/>) :
+          (<p>
+            {name}님의
             <br />
             쓰레기수거 활동 분석입니다.
-          </p>
+          </p>)
+          }
           <ActivityGraph />
         </section>
       </motion.main>

@@ -5,7 +5,7 @@
   align-items: center;
   margin: 0.25rem 0.75rem 0.25rem 0.75rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2),
-  0px 4px 8px rgba(0, 0, 0, 0.2);
+    0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   width: 165px;
   height: 170px;
@@ -33,12 +33,50 @@
 .cardPhoto {
   width: 85%;
   height: 85%;
-  background-color: gray;
+  overflow: hidden;
+  position: relative;
+  background-color: #ebebeb;
   border-radius: 20px;
   background-size: cover;
   background-position: center;
   position: relative;
   top: 10px;
+}
+
+.cardPhotos {
+  width: 85%;
+  height: 85%;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 10px;
+}
+
+@keyframes loading {
+  0% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+
+  50% {
+    background-color: rgba(165, 165, 165, 0.3);
+  }
+
+  100% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+}
+
+.cardPhoto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  /* background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2); */
+  animation: loading 2s infinite linear;
 }
 
 .cardMainText {
@@ -58,3 +96,4 @@
   position: relative;
   top: -10px;
 }
+
