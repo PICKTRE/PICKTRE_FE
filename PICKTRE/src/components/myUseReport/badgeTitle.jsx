@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import showProfile from "../../service/showProfile";
 
-const badgeTitle = () => {
+const BadgeTitle = () => {
 
   const [name, setName] = useState("");
   const [tierImg, setTierImg] = useState("");
@@ -53,4 +53,4 @@ const badgeTitle = () => {
   );
 };
 
-export default badgeTitle;
+export default BadgeTitle;

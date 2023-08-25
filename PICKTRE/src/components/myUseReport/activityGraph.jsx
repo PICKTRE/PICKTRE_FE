@@ -2,7 +2,7 @@ import classes from "./activityGraph.module.css";
 import { VictoryBar, VictoryLabel } from "victory";
 import { useState } from "react";
 
-const activityGraph = () => {
+const ActivityGraph = () => {
   const [selectedView, setSelectedView] = useState("월별");
 
   const data =
@@ -92,4 +92,4 @@ const activityGraph = () => {
   );
 };
 
-export default activityGraph;
+export default ActivityGraph;

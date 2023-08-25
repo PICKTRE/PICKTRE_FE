@@ -2,8 +2,8 @@ import classes from "./MyUseReport.module.css";
 import MyUseReportHeader from "./MyUseReportHeader";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
-import ActivityGraph from "./activityGraph";
-import BadgeTitle from "./badgeTitle";
+import ActivityGraph from "./ActivityGraph";
+import BadgeTitle from "./BadgeTitle";
 import showProfile from "../../service/showProfile";
 import { useEffect, useState } from "react";
 
@@ -46,13 +46,13 @@ const ActivityReport = () => {
           <BadgeTitle />
         </section>
         <section className={classes.activitySection}>
-          {isLoading ? 
-          (<div className={classes.activities}/>) :
-          (<p>
-            {name}님의
-            <br />
-            쓰레기수거 활동 분석입니다.
-          </p>)
+          {isLoading ?
+            (<div className={classes.activities} />) :
+            (<p>
+              {name}님의
+              <br />
+              쓰레기수거 활동 분석입니다.
+            </p>)
           }
           <ActivityGraph />
         </section>

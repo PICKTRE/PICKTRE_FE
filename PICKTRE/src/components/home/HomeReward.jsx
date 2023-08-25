@@ -6,6 +6,7 @@ const HomeReward = () => {
   const [name, setName] = useState("");
   const [todayReward, setTodayReward] = useState(0);
   const [tierImg, setTierImg] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     showProfile()
@@ -35,11 +36,14 @@ const HomeReward = () => {
           </li>
         </ul>
         <div className={classes.rewardTier}>
-          <img
-            src={tierImg}
-            alt="티어이미지입니다."
-            className={classes.rewardTierImgs}
-          />
+          {isLoading ?
+            (<div className={classes.rewardTierImg} />) :
+            (<img
+              src={tierImg}
+              alt="티어이미지입니다."
+              className={classes.rewardTierImgs}
+            />)
+          }
         </div>
       </div>
     </div>

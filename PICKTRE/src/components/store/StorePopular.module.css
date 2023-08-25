@@ -13,8 +13,8 @@
 }
 
 .popularGoods::-webkit-scrollbar {
-  width: 0px;
-  height: 0px; /* 스크롤바의 너비 */
+  width: 4px;
+  height: 1px; /* 스크롤바의 너비 */
 }
 
 .popularGoods::-webkit-scrollbar-thumb {

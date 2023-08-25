@@ -4,7 +4,6 @@ import { BASE_URL } from "../constants/url";
 const googleProfile = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/google`, {
-      withCredentials: true,
       //   headers: {
       //     Authorization: `Bearer ${localStorage.getItem("token")}`,
       //   },
