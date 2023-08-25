@@ -20,6 +20,11 @@ const MyList = () => {
   const onClickInviteFriends = () => {
     navigate("/invite-friends");
   };
+
+  const onClickAlert = () => {
+    alert("추후에 업데이트 될 서비스입니다.")
+  }
+
   return (
     <section className={classes.listSection}>
       <ul className={classes.firstList}>
@@ -52,7 +57,7 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
+        <li onClick={onClickAlert}>
           <div className={classes.listTitle}>
             <img
               src={guide}
@@ -65,7 +70,7 @@ const MyList = () => {
         </li>
       </ul>
       <ul className={classes.secondList}>
-        <li>
+        <li onClick={onClickAlert}>
           <div className={classes.listTitle}>
             <img
               src={announcement}
@@ -76,7 +81,7 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
+        <li onClick={onClickAlert}>
           <div className={classes.listTitle}>
             <img
               src={service_guide}
@@ -87,8 +92,8 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
-          <div className={classes.listTitle}>
+        <li onClick={onClickAlert}>
+          <div className={classes.listTitle} >
             <img
               src={service_center}
               alt="service_center이미지입니다."

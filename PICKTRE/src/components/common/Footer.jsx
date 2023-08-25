@@ -25,6 +25,10 @@ const Footer = () => {
     navigate("/QRcamera");
   };
 
+  const onClickAlert = () => {
+    alert("추후에 업데이트 될 서비스입니다.")
+  }
+
   return (
     <footer className={classes.footer}>
       <div className={classes.LeftSection} onClick={onClickPoint}>
@@ -49,7 +53,7 @@ const Footer = () => {
         <img src={mypage} alt="푸터이미지입니다." className={classes.mypage} />
         <p>마이페이지</p>
       </div>
-      <div className={classes.RightSection}>
+      <div className={classes.RightSection} onClick={onClickAlert}>
         <img
           src={setting}
           alt="푸터이미지입니다."
