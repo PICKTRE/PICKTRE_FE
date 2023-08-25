@@ -30,8 +30,8 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
-          <div className={classes.listTitle} onClick={onClickActivityReport}>
+        <li onClick={onClickActivityReport}>
+          <div className={classes.listTitle}>
             <img
               src={report}
               alt="report이미지입니다."
@@ -41,8 +41,8 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
-          <div className={classes.listTitle} onClick={onClickInviteFriends}>
+        <li onClick={onClickInviteFriends}>
+          <div className={classes.listTitle}>
             <img
               src={invite}
               alt="invite이미지입니다."
