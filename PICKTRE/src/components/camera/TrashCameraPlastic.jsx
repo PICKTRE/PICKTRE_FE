@@ -3,11 +3,11 @@ import classes from "./TrashCamera.module.css";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import * as tf from "@tensorflow/tfjs";
 
 const Trashcamera = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const contentVariants = {
     hidden: {
       opacity: 0.3,
@@ -30,7 +30,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    net = await tf.loadLayersModel("../../../dist/ResNet50V2_fine_tuned.json/model.json");
+    net = await tf.loadLayersModel("./PICKTRE/dist/ResNet50V2_fine_tuned.json/model.json");
   };
 
   const run = async () => {
@@ -61,13 +61,13 @@ const Trashcamera = () => {
 
         if (figures.current) {
           figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
-          if (resultLabel === "plastic") {
-            alert("확인되었습니다.");
-            navigate("/home");
-            return () => {
-              isRunning = false;
-            };
-          }
+          // if (resultLabel === "plastic") {
+          //   alert("확인되었습니다.");
+          //   navigate("/home");
+          //   return () => {
+          //     isRunning = false;
+          //   };
+          // }
         }
 
         img.dispose();
