@@ -18,6 +18,7 @@ const StorePopular = ({ products }) => {
               imagePath={product.imagePath}
               price={product.price}
               productName={product.productName}
+              isLoading={false}
             />
           ))}
         </div>

@@ -4,6 +4,7 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
 // import { useNavigate } from "react-router-dom";
+// import { VITE_MODEL_URL } from "../../constants/OAuth";
 import * as tf from "@tensorflow/tfjs";
 
 const Trashcamera = () => {
@@ -30,7 +31,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    const modelUrl = "https://picktre.netlify.app/ResNet50V2_fine_tuned.json/model.json";
+    const modelUrl = "../../../public/ResNet50V2_fine_tuned.json/model.json";
     net = await tf.loadLayersModel(modelUrl);
   };
 
@@ -119,7 +120,7 @@ const Trashcamera = () => {
             muted={true}
             ref={camera}
             width="390"
-            height="668.5"
+            height="600"
           />
         </section>
       </motion.main>

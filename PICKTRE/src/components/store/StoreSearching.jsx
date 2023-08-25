@@ -1,7 +1,25 @@
 import classes from "./StoreSearching.module.css";
 import { IoIosArrowDown } from "react-icons/io";
+import { useState, useEffect } from "react";
+import showProfile from "../../service/showProfile";
 
 const StoreSearching = () => {
+
+  const [name, setName] = useState("");
+  const [point, setPoint] = useState(0);
+
+  useEffect(() => {
+    showProfile()
+      .then((data) => {
+        setName(data.data.username);
+        setPoint(data.data.rewardPoints);
+        // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <div className={classes.searching}>
@@ -15,11 +33,11 @@ const StoreSearching = () => {
         </div>
       </div>
       <div className={classes.currentPoint}>
-        픽트리님,
+        {name}님,
         <br />
         현재 보유포인트
         <br />
-        <p>8,900P</p>
+        <p>{point}P</p>
       </div>
     </>
   );
