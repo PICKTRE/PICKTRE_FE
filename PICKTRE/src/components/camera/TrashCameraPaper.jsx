@@ -30,7 +30,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    net = await tf.loadLayersModel("../../../public/ResNet50V2_fine_tuned/model.json");
+    net = await tf.loadLayersModel("../../../public/ResNet50V2_fine_tuned.json/123.txt");
   };
 
   const run = async () => {
