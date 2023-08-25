@@ -30,7 +30,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    net = await tf.loadLayersModel("../../../public/ResNet50V2_fine_tuned/model.json");
+    net = await tf.loadLayersModel("../../../dist/ResNet50V2_fine_tuned.json/model.json");
   };
 
   const run = async () => {
@@ -38,6 +38,7 @@ const Trashcamera = () => {
     const webcam = await tf.data.webcam(camera.current, {
       resizeWidth: 224,
       resizeHeight: 224,
+      video: { facingMode: 'environment' },
     });
 
     const frameInterval = 500; // 프레임 해제 간격 (밀리초)
