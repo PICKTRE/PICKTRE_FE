@@ -30,7 +30,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    const modelUrl = "https://picktre.netlify.app/public/ResNet50V2_fine_tuned.json/123.txt";
+    const modelUrl = "https://picktre.netlify.app/ResNet50V2_fine_tuned.json/model.json";
     net = await tf.loadLayersModel(modelUrl);
   };
 
