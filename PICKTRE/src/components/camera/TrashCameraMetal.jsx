@@ -5,6 +5,7 @@ import Footer from "../common/Footer";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { VITE_MODEL_URL } from "../../constants/OAuth";
+import cameraReward from "../../service/cameraReward";
 import * as tf from "@tensorflow/tfjs";
 
 const Trashcamera = () => {
@@ -62,11 +63,18 @@ const Trashcamera = () => {
         if (figures.current) {
           figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
           if (resultLabel === "metal") {
-            alert("확인되었습니다.");
-            navigate("/home");
-            return () => {
-              isRunning = false;
-            };
+            try {
+              const createResponse = await cameraReward(2, "metal", 200);
+              console.log(createResponse);
+              alert("확인되었습니다.");
+              navigate("/home");
+              return () => {
+                isRunning = false;
+              };
+              // Handle createResponse if needed
+            } catch (error) {
+              console.error("Camera reward creation error:", error);
+            }
           }
         }
   

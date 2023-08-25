@@ -3,12 +3,13 @@ import classes from "./TrashCamera.module.css";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { VITE_MODEL_URL } from "../../constants/OAuth";
 import * as tf from "@tensorflow/tfjs";
+import cameraReward from "../../service/cameraReward";
 
 const Trashcamera = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const contentVariants = {
     hidden: {
       opacity: 0.3,
@@ -63,13 +64,21 @@ const Trashcamera = () => {
 
         if (figures.current) {
           figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
-          // if (resultLabel === "plastic") {
-          //   alert("확인되었습니다.");
-          //   navigate("/home");
-          //   return () => {
-          //     isRunning = false;
-          //   };
-          // }
+          if (resultLabel === "plastic") {
+            try {
+              const createResponse = await cameraReward(2, "plastic", 400);
+              console.log(createResponse);
+              alert("확인되었습니다.");
+              navigate("/home");
+              return () => {
+                isRunning = false;
+              };
+              // Handle createResponse if needed
+            } catch (error) {
+              console.error("Camera reward creation error:", error);
+            }
+
+          }
         }
 
         img.dispose();
