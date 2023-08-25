@@ -1,5 +1,4 @@
 import classes from "./activityGraph.module.css";
-import React from "react";
 import { VictoryBar, VictoryLabel } from "victory";
 import { useState } from "react";
 
