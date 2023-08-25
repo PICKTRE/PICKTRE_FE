@@ -17,6 +17,7 @@ import TrashcameraMedical from "./components/camera/TrashCameraMedical";
 import Benefit from "./components/benefit/Benefit";
 import Callback from "./components/landingPage/Callback";
 import InviteFriends from "./components/inviteFriends/InviteFriends";
+import Qna from "./components/qna/Qna";
 import RedirectPage from "./components/landingPage/RedirectPage";
 import { AnimatePresence } from "framer-motion";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/activity-report" element={<ActivityReport />} />
           <Route path="/login" element={<Callback />} />
           <Route path="/invite-friends" element={<InviteFriends />}></Route>
+          <Route path="/qna" element={<Qna />}></Route>
           <Route path="/oauth/redirected/google" element={<RedirectPage />} />
         </Routes>
       </AnimatePresence>

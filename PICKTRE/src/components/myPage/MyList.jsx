@@ -20,10 +20,13 @@ const MyList = () => {
   const onClickInviteFriends = () => {
     navigate("/invite-friends");
   };
+  const onClickQna = () => {
+    navigate("/qna");
+  };
 
   const onClickAlert = () => {
-    alert("추후에 업데이트 될 서비스입니다.")
-  }
+    alert("추후에 업데이트 될 서비스입니다.");
+  };
 
   return (
     <section className={classes.listSection}>
@@ -92,14 +95,14 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li onClick={onClickAlert}>
-          <div className={classes.listTitle} >
+        <li onClick={onClickQna}>
+          <div className={classes.listTitle}>
             <img
               src={service_center}
               alt="service_center이미지입니다."
               className={classes.service_center}
             />
-            문의/고객센터
+            자주 묻는 질문
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
