@@ -1,0 +1,13 @@
+.popularDividingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popularGoods {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  top: -25px;
+}

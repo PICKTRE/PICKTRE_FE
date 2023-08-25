@@ -25,7 +25,17 @@ export const useGeoLocation = () => {
       return;
     }
 
+    // 최초 위치 가져오기
     geolocation.getCurrentPosition(handleSuccess, handleError);
+
+    // 일정 간격마다 위치 업데이트하기
+    const updateInterval = setInterval(() => {
+      geolocation.getCurrentPosition(handleSuccess, handleError);
+    }, 1000);
+
+    return () => {
+      clearInterval(updateInterval); // 컴포넌트 언마운트 시 간격 업데이트 중지
+    };
   }, []);
 
   return { location, error };

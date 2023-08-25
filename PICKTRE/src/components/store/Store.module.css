@@ -1,0 +1,27 @@
+.main {
+    width: 390px;
+    height: 646.5px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+}
+
+.searchingSection{
+    width: 390px;
+    height: 15%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popularSection{
+    width: 390px;
+    height: 37%;
+    background-color: #ffffff;
+}
+
+.otherSection{
+    width: 390px;
+    height: 48%;
+    background-color: #ffffff;
+}

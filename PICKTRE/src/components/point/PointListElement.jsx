@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 // import pointData from "./dummy/pointData.json";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../constants/url";
 
 const msrl = 2;
 const places = [
@@ -18,7 +19,7 @@ const PointListElement = () => {
   const [pointData, setPointData] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://118.67.131.231:8080/api/reward-transactions/${msrl}`) // GET 요청 보내기
+      .get(`${BASE_URL}/reward-transactions/${msrl}`) // GET 요청 보내기
       .then((response) => {
         console.log(response.data.list);
         setPointData(response.data.list);

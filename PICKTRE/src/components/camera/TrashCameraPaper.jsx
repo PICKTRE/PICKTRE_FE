@@ -21,15 +21,16 @@ const Trashcamera = () => {
   const camera = useRef();
   const figures = useRef();
   const label_dict = {
-    0: "cardboard",
-    1: "glass",
-    2: "metal",
-    3: "paper",
-    4: "plastic",
-    5: "trash",
+    0: 'cardboard',
+    1: 'e-waste',
+    2: 'glass',
+    3: 'medical',
+    4: 'metal',
+    5: 'paper',
+    6: 'plastic'
   };
   const loadModel = async () => {
-    net = await tf.loadLayersModel("../../../public/tfjs_model/model.json");
+    net = await tf.loadLayersModel("../../../public/ResNet50V2_fine_tuned.json/model.json");
   };
 
   const run = async () => {
@@ -55,10 +56,11 @@ const Trashcamera = () => {
         const resultLabel = label_dict[index];
 
         if (figures.current) {
-          figures.current.innerText = `예측 결과: ${resultLabel}`;
+          figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
           if (resultLabel === "paper") {
             alert("확인되었습니다.");
             navigate("/home");
+            return;
           }
         }
 
