@@ -17,6 +17,9 @@ const MyList = () => {
   const onClickActivityReport = () => {
     navigate("/activity-report");
   };
+  const onClickInviteFriends = () => {
+    navigate("/invite-friends");
+  };
   return (
     <section className={classes.listSection}>
       <ul className={classes.firstList}>
@@ -27,8 +30,8 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
-          <div className={classes.listTitle} onClick={onClickActivityReport}>
+        <li onClick={onClickActivityReport}>
+          <div className={classes.listTitle}>
             <img
               src={report}
               alt="report이미지입니다."
@@ -38,7 +41,7 @@ const MyList = () => {
           </div>
           <IoIosArrowForward size="27" color="#ACE2B5" />
         </li>
-        <li>
+        <li onClick={onClickInviteFriends}>
           <div className={classes.listTitle}>
             <img
               src={invite}
