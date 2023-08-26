@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Redirect } from "react-router-dom";
 import LandingPage from "./components/landingPage/LandingPage";
 import MyPage from "./components/myPage/MyPage";
 import Point from "./components/point/Point";
@@ -29,10 +29,8 @@ function App() {
     <>
       <AnimatePresence>
         <Routes>
-          <Route
-            path="/"
-            element={!memberId ? <Navigate to="/" replace /> : <LandingPage />}
-          />
+          {!memberId && <Redirect from="/" to="/" />}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/point" element={<Point />} />
           <Route path="/map" element={<Map />} />
