@@ -35,8 +35,7 @@ const PointListElement = () => {
       {pointData.map((data, index) => (
         <div key={index} className={classes.pointListElement}>
           <div className={classes.date}>
-            {data.transactionDate.substring(5, 7)}.
-            {data.transactionDate.substring(8, 10)}
+            {data.transactionDate[1]}.{data.transactionDate[2]}
           </div>
           <div className={classes.textSection}>
             <div className={classes.mainText}>
