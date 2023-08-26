@@ -11,11 +11,11 @@ const RedirectPage = () => {
 
     // memberId와 accessToken 값을 추출
     const memberId = getQueryParamValue('memberId');
-    const accessToken = getQueryParamValue('accessToken');
+    //const accessToken = getQueryParamValue('accessToken');
 
     // 추출한 값들을 활용
-    console.log('Member ID:', memberId);
-    console.log('Access Token:', accessToken);
+    // console.log('Member ID:', memberId);
+    // console.log('Access Token:', accessToken);
 
     // 추출한 accessToken 값을 localStorage에 저장
     useEffect(() => {
