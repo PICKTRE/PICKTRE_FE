@@ -55,12 +55,12 @@ function App() {
               <Route path="/setting" element={<Setting />} />
             </>
           )}
-          {!memberId && (
+          {/* {!memberId && (
             <Route
               path="/*"
               element={<Navigate to="/" replace />} // 경고가 필요한 경우 리디렉션
             />
-          )}
+          )} */}
         </Routes>
       </AnimatePresence>
     </>
