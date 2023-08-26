@@ -11,7 +11,7 @@ const Ranker = ({ rank, name, count }) => {
       >
         <span className={classes.rank}>{rank}</span>
         <span className={classes.name}>{name}</span>
-        <span className={classes.count}>{count}</span>
+        <span className={classes.count}>{count}회</span>
       </div>
     </>
   );
