@@ -23,7 +23,8 @@ const RedirectPage = () => {
         localStorage.setItem('memberId', memberId);
         console.log("저장완료");
         // memberId가 유효하다면 /home 페이지로 이동
-        navigate('/home');
+        // navigate('/home');
+        window.location.href("/home");
         // if (memberId) {
         //     navigate('/home');
         // } else {
