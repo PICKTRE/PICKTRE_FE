@@ -10,6 +10,7 @@ import * as tf from "@tensorflow/tfjs";
 
 const Trashcamera = () => {
   const navigate = useNavigate();
+  const memberId = localStorage.getItem("memberId");
   const contentVariants = {
     hidden: {
       opacity: 0.3,
@@ -21,16 +22,16 @@ const Trashcamera = () => {
   };
   let net;
   const camera = useRef();
-  const figures = useRef();
-  const label_dict = {
-    0: 'cardboard',
-    1: 'e-waste',
-    2: 'glass',
-    3: 'medical',
-    4: 'metal',
-    5: 'paper',
-    6: 'plastic'
-  };
+  // const figures = useRef();
+  // const label_dict = {
+  //   0: 'cardboard',
+  //   1: 'e-waste',
+  //   2: 'glass',
+  //   3: 'medical',
+  //   4: 'metal',
+  //   5: 'paper',
+  //   6: 'plastic'
+  // };
   const loadModel = async () => {
     net = await tf.loadLayersModel(`${VITE_MODEL_URL}`);
   };
@@ -57,26 +58,42 @@ const Trashcamera = () => {
 
         const result = await net.predict(resizedImage);
 
-        const index = result.argMax(1).dataSync();
+        // const index = result.argMax(1).dataSync();
 
-        const resultLabel = label_dict[index];
+        // const resultLabel = label_dict[index];
 
-        if (figures.current) {
-          figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
-          if (resultLabel === "paper") {
-            try {
-              const createResponse = await cameraReward(2, "paper", 200);
-              console.log(createResponse);
-              alert("확인되었습니다.");
-              navigate("/home");
-              return () => {
-                isRunning = false;
-              };
-              // Handle createResponse if needed
-            } catch (error) {
-              console.error("Camera reward creation error:", error);
-            }
+        // if (figures.current) {
+        //   figures.current.innerText = `쓰레기 측정 결과: ${resultLabel}`;
+        //   if (resultLabel === "paper") {
+        //     try {
+        //       const createResponse = await cameraReward(2, "paper", 200);
+        //       console.log(createResponse);
+        //       alert("확인되었습니다.");
+        //       navigate("/home");
+        //       return () => {
+        //         isRunning = false;
+        //       };
+        //       // Handle createResponse if needed
+        //     } catch (error) {
+        //       console.error("Camera reward creation error:", error);
+        //     }
+        //   }
+        // }
+
+        if (result.dataSync()[5] >= 0.8) {
+          // alert("성공");
+          try {
+            const createResponse = await cameraReward(memberId, "paper", 200);
+            console.log(createResponse);
+            alert("확인되었습니다.");
+            navigate("/home");
+            return () => {
+              isRunning = false;
+            };
+          } catch (error) {
+            console.error("Camera reward creation error:", error);
           }
+
         }
 
         img.dispose();
@@ -120,7 +137,7 @@ const Trashcamera = () => {
         animate="visible"
       >
         <section className={classes.camera}>
-          <div ref={figures} />
+          {/* <div ref={figures} /> */}
           <video
             autoPlay
             playsInline
