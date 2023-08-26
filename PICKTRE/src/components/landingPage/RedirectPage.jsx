@@ -27,7 +27,7 @@ const RedirectPage = () => {
             navigate('/home');
         } else {
             alert("로그인 실패");
-            navigate('/login');
+            navigate('/');
         }
     }, [navigate, memberId]);
 
