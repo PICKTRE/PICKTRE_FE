@@ -17,15 +17,15 @@ const GradeSection = () => {
   const getExplanationText = () => {
     switch (clickedTier) {
       case "tier1":
-        return "수거횟수 500회 이상, 누적 50,000P 이상";
+        return "누적 50,000P 이상";
       case "tier2":
-        return "수거횟수 200회 이상, 누적 20,000P 이상";
+        return "누적 20,000P 이상";
       case "tier3":
-        return "수거횟수 70회 이상, 누적 7,000P 이상";
+        return "누적 7,000P 이상";
       case "tier4":
-        return "수거횟수 40회 이상, 누적 4,000P 이상";
+        return "누적 4,000P 이상";
       case "tier5":
-        return "수거횟수 0회 이상, 누적 100P 이상";
+        return "누적 0P 이상";
       default:
         return "등급기준이 표시됩니다.";
     }

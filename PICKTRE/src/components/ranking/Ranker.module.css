@@ -1,8 +1,13 @@
 .rankFirst {
-  background-color: #74EBD5;
-  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+  background-color: #ffffff;
+  background: linear-gradient(-45deg, #ace2b5, #008163);
   font-family: 'NEXON Lv1 Gothic OTF Bold';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
+
 
 .rankerSection {
   background-color: white;

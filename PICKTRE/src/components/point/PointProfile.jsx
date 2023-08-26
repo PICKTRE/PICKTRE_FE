@@ -30,7 +30,6 @@ const PointProfile = () => {
         setTrashCount(response.data.data.trashCount);
         setRewardPoint(response.data.data.rewardPoints);
         setTodayReward(response.data.data.todayReward);
-        // setTrashCount(response.data.data.trashCount);
       })
       .catch((error) => {
         // API 요청이 실패한 경우

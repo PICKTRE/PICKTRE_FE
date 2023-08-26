@@ -8,13 +8,12 @@ import axios from "axios";
 
 // eslint-disable-next-line react/prop-types
 const StorePopular = ({ products, isLoading }) => {
-  const msrl = 1;
+  const msrl = localStorage.getItem("memberId");
   // 각 상품에 대한 모달 상태 배열
   const [modalOpenStates, setModalOpenStates] = useState(
     // eslint-disable-next-line react/prop-types
     new Array(products.length).fill(false)
   );
-  const [userId, setUserId] = useState(0);
   const [productId, setProductId] = useState(0);
   const [userName, setUserName] = useState("");
   const [rewardPoint, setRewardPoint] = useState(0);
@@ -29,7 +28,7 @@ const StorePopular = ({ products, isLoading }) => {
   const orderGoods = () => {
     axios
       .post(`${BASE_URL}/orders`, {
-        memberId: userId,
+        memberId: msrl,
         productId: productId,
         quantity: 1,
         useRewardPoints: 1,
@@ -47,7 +46,6 @@ const StorePopular = ({ products, isLoading }) => {
     axios
       .get(`${BASE_URL}/members/${msrl}`) // GET 요청 보내기
       .then((response) => {
-        setUserId(response.data.data.memberId);
         setUserName(response.data.data.username);
         setRewardPoint(response.data.data.rewardPoints);
       })
