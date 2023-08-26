@@ -25,6 +25,9 @@ const RedirectPage = () => {
         // memberId가 유효하다면 /home 페이지로 이동
         if (memberId) {
             navigate('/home');
+        } else {
+            alert("로그인 실패");
+            navigate('/login');
         }
     }, [navigate, memberId]);
 

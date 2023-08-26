@@ -14,6 +14,7 @@ const HomeReward = () => {
         setName(data.data.username);
         setTodayReward(data.data.todayReward);
         setTierImg(data.data.tierPath);
+        setIsLoading(false);
         // console.log("Data loaded:", data.data.rewardPoints, data.data.username);
       })
       .catch((err) => {

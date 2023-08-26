@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 
-const msrl = 1;
+
 
 const PointProfile = () => {
   // const [profileData, setProfileData] = useState();
@@ -19,6 +19,7 @@ const PointProfile = () => {
     navigate("/activity-report");
   };
 
+  const msrl = localStorage.getItem("memberId");
   useEffect(() => {
     axios
       .get(`${BASE_URL}/members/${msrl}`) // GET 요청 보내기
