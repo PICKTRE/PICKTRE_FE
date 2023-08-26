@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Redirect } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LandingPage from "./components/landingPage/LandingPage";
 import MyPage from "./components/myPage/MyPage";
 import Point from "./components/point/Point";
@@ -23,13 +23,11 @@ import RedirectPage from "./components/landingPage/RedirectPage";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-  const memberId = localStorage.getItem("memberId");
 
   return (
     <>
       <AnimatePresence>
         <Routes>
-          {!memberId && <Redirect from="/" to="/" />}
           <Route path="/" element={<LandingPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/point" element={<Point />} />
