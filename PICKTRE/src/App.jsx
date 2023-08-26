@@ -20,6 +20,7 @@ import InviteFriends from "./components/inviteFriends/InviteFriends";
 import Notice from "./components/notice/Notice";
 import Qna from "./components/qna/Qna";
 import RedirectPage from "./components/landingPage/RedirectPage";
+import Setting from "./components/setting/Setting"
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -44,9 +45,10 @@ function App() {
           <Route path="/ranking" element={<Ranking />} />
           <Route path="/store" element={<Store />} />
           <Route path="/activity-report" element={<ActivityReport />} />
-          <Route path="/invite-friends" element={<InviteFriends />}></Route>
-          <Route path="/notice" element={<Notice />}></Route>
-          <Route path="/qna" element={<Qna />}></Route>
+          <Route path="/invite-friends" element={<InviteFriends />}/>
+          <Route path="/notice" element={<Notice />}/>
+          <Route path="/qna" element={<Qna />}/>
+          <Route path="/setting" element={<Setting />} />
           <Route path="/oauth/redirected/google" element={<RedirectPage />} />
         </Routes>
       </AnimatePresence>

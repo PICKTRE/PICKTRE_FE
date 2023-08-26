@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   const onClickAlert = () => {
-    alert("추후에 업데이트 될 서비스입니다.")
+    navigate("/setting")
   }
 
   return (
