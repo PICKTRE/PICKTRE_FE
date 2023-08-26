@@ -21,8 +21,23 @@ import Notice from "./components/notice/Notice";
 import Qna from "./components/qna/Qna";
 import RedirectPage from "./components/landingPage/RedirectPage";
 import { AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
+  const getMemberIdFromLocalStorage = () => {
+    return localStorage.getItem("memberId");
+  };
+
+  const memberId = getMemberIdFromLocalStorage();
+
+  // memberId가 없으면 LandingPage로 리디렉션
+  if (!memberId) {
+    alert("로그인이 필요한 서비스입니다.");
+    return navigate("/");
+  }
+
   return (
     <>
       <AnimatePresence>
