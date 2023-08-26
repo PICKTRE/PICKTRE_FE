@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/landingPage/LandingPage";
 import MyPage from "./components/myPage/MyPage";
 import Point from "./components/point/Point";
@@ -55,12 +55,12 @@ function App() {
               <Route path="/setting" element={<Setting />} />
             </>
           )}
-          {/* {!memberId && (
+          {!memberId && (
             <Route
               path="/*"
               element={<Navigate to="/" replace />} // 경고가 필요한 경우 리디렉션
             />
-          )} */}
+          )}
         </Routes>
       </AnimatePresence>
     </>
