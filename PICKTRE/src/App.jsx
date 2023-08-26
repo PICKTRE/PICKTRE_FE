@@ -31,6 +31,7 @@ function App() {
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/oauth/redirected/google" element={<RedirectPage />} />
           {memberId && (
             <>
               <Route path="/mypage" element={<MyPage />} />
@@ -52,7 +53,6 @@ function App() {
               <Route path="/notice" element={<Notice />} />
               <Route path="/qna" element={<Qna />} />
               <Route path="/setting" element={<Setting />} />
-              <Route path="/oauth/redirected/google" element={<RedirectPage />} />
             </>
           )}
           {/* {!memberId && (
