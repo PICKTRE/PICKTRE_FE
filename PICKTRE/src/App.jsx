@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/landingPage/LandingPage";
 import MyPage from "./components/myPage/MyPage";
 import Point from "./components/point/Point";
@@ -24,32 +24,43 @@ import Setting from "./components/setting/Setting"
 import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const memberId = localStorage.getItem("memberId");
 
   return (
     <>
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/mypage" element={<MyPage />} />
-          <Route path="/point" element={<Point />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/qrcamera" element={<QRCamera />} />
-          <Route path="/trashcamera/glass" element={<TrashcameraGlass />} />
-          <Route path="/trashcamera/plastic" element={<TrashcameraPlastic />} />
-          <Route path="/trashcamera/metal" element={<TrashcameraMetal />} />
-          <Route path="/trashcamera/paper" element={<TrashcameraPaper />} />
-          <Route path="/trashcamera/trash" element={<TrashcameraTrash />} />
-          <Route path="/trashcamera/medical" element={<TrashcameraMedical />} />
-          <Route path="/benefit" element={<Benefit />} />
-          <Route path="/ranking" element={<Ranking />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/activity-report" element={<ActivityReport />} />
-          <Route path="/invite-friends" element={<InviteFriends />}/>
-          <Route path="/notice" element={<Notice />}/>
-          <Route path="/qna" element={<Qna />}/>
-          <Route path="/setting" element={<Setting />} />
-          <Route path="/oauth/redirected/google" element={<RedirectPage />} />
+          {memberId && (
+            <>
+              <Route path="/mypage" element={<MyPage />} />
+              <Route path="/point" element={<Point />} />
+              <Route path="/map" element={<Map />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/qrcamera" element={<QRCamera />} />
+              <Route path="/trashcamera/glass" element={<TrashcameraGlass />} />
+              <Route path="/trashcamera/plastic" element={<TrashcameraPlastic />} />
+              <Route path="/trashcamera/metal" element={<TrashcameraMetal />} />
+              <Route path="/trashcamera/paper" element={<TrashcameraPaper />} />
+              <Route path="/trashcamera/trash" element={<TrashcameraTrash />} />
+              <Route path="/trashcamera/medical" element={<TrashcameraMedical />} />
+              <Route path="/benefit" element={<Benefit />} />
+              <Route path="/ranking" element={<Ranking />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/activity-report" element={<ActivityReport />} />
+              <Route path="/invite-friends" element={<InviteFriends />} />
+              <Route path="/notice" element={<Notice />} />
+              <Route path="/qna" element={<Qna />} />
+              <Route path="/setting" element={<Setting />} />
+              <Route path="/oauth/redirected/google" element={<RedirectPage />} />
+            </>
+          )}
+          {!memberId && (
+            <Route
+              path="/*"
+              element={<Navigate to="/" replace />} // 경고가 필요한 경우 리디렉션
+            />
+          )}
         </Routes>
       </AnimatePresence>
     </>
