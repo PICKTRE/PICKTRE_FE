@@ -30,7 +30,8 @@ const Ranking = () => {
               랭킹
               <div className={classes.rankingSubText}>
                 재활용 열정과 환경 보호 노력을 바탕으로 한 랭킹입니다. 환경
-                보호의 중요성을 공유하며 함께 노력하는 모습을 확인하세요!{" "}
+                보호의 중요성을 공유하며 함께 노력하는 모습을 확인하세요! (순위
+                정렬 기준: 버린 횟수){" "}
               </div>
             </div>
             <div className={classes.rankingListSection}>
