@@ -25,7 +25,7 @@ const GradeSection = () => {
       case "tier4":
         return "수거횟수 40회 이상, 누적 4,000P 이상";
       case "tier5":
-        return "수거횟수 1회 이상, 누적 100P 이상";
+        return "수거횟수 0회 이상, 누적 100P 이상";
       default:
         return "등급기준이 표시됩니다.";
     }
