@@ -4,7 +4,7 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-// import { VITE_MODEL_URL } from "../../constants/OAuth";
+import { VITE_MODEL_URL } from "../../constants/OAuth";
 import * as tf from "@tensorflow/tfjs";
 import cameraReward from "../../service/cameraReward";
 
@@ -32,8 +32,7 @@ const Trashcamera = () => {
     6: 'plastic'
   };
   const loadModel = async () => {
-    const modelUrl = "../../../public/ResNet50V2_fine_tuned.json/model.json";
-    net = await tf.loadLayersModel(modelUrl);
+    net = await tf.loadLayersModel(`${VITE_MODEL_URL}`);
   };
 
   const run = async () => {
@@ -128,8 +127,7 @@ const Trashcamera = () => {
             playsInline
             muted={true}
             ref={camera}
-            width="390"
-            height="600"
+            style={{ width: "390px", height: "665px" }}
           />
         </section>
       </motion.main>

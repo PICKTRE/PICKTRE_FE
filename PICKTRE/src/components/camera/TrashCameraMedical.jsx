@@ -126,8 +126,7 @@ const Trashcamera = () => {
             playsInline
             muted={true}
             ref={camera}
-            width="390"
-            height="668.5"
+            style={{ width: "390px", height: "665px" }}
           />
         </section>
       </motion.main>

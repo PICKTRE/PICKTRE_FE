@@ -101,7 +101,7 @@ const QRcamera = () => {
                     autoPlay
                     playsInline
                     muted
-                    style={{ width: "390px", height: "668.5px" }}
+                    style={{ width: "390px", height: "665px" }}
                 />
                 <img src={cameraCapture} alt="이미지" className={classes.camera} />
                 {text && <Link to={text} target="_blank" rel="noopener noreferrer">{text}</Link>}
